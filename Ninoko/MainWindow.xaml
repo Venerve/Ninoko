@@ -38,7 +38,7 @@
 
         <StackPanel VerticalAlignment="Center">
             <TextBlock 
-                    Text="Welcome to NiñoKo!" 
+                    Text="Welcome to NiñoKo" 
                     FontWeight="Light" 
                     FontSize="23" 
                     HorizontalAlignment="Center"
