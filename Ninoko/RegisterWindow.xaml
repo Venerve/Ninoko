@@ -1,16 +1,16 @@
-﻿<Window x:Class="Ninoko.MainWindow"
+﻿<Window x:Class="Ninoko.RegisterWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ninoko"
         mc:Ignorable="d"
-        Title="MainWindow" Height="430" Width="380"
+        Title="RegisterWindow" Height="430" Width="300"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="100"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -23,7 +23,17 @@
             </Border.Background>
         </Border>
 
-        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right">
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock
+                Name="Registrationblock"
+                Text="Registration" 
+                FontWeight="Light" 
+                FontSize="23" 
+                HorizontalAlignment="Center"
+                Foreground="White"/>
+        </StackPanel>
+
+        <StackPanel>
             <Button 
                     Content="X"  
                     Click="Exit"
@@ -31,22 +41,14 @@
                     FontSize="23" 
                     Margin="10"
                     Background="Transparent"
-                    HorizontalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
                     Foreground="White"
                     BorderThickness="0"/>
         </StackPanel>
 
-        <StackPanel VerticalAlignment="Center">
-            <TextBlock 
-                    Text="Welcome to NiñoKo!" 
-                    FontWeight="Light" 
-                    FontSize="23" 
-                    HorizontalAlignment="Center"
-                    Foreground="White"/>
-        </StackPanel>
-
         <StackPanel Grid.Row="1" Margin="20">
-            <Label 
+            <Label
                 Content="Username" 
                 Foreground="White"
                 FontWeight="Light" 
@@ -56,15 +58,14 @@
                 BorderThickness="0"
                 Opacity="0.7"/>
             <TextBox 
-                Name="logUsernameBox" 
+                Name="userameBox" 
                 MaxLength="20"
                 Foreground="Black"
                 FontWeight="Light" 
                 FontSize="21"
                 Background="White"
                 BorderThickness="0"
-                Opacity="0.2"
-                Margin="0 10 0 0"/>
+                Opacity="0.2"/>
             <Label 
                 Content="Password" 
                 Foreground="White"
@@ -73,10 +74,9 @@
                 Background="Transparent"
                 HorizontalAlignment="Left" 
                 BorderThickness="0"
-                Opacity="0.7"
-                Margin="0 8 0 0"/>
+                Opacity="0.7"/>
             <PasswordBox 
-                Name="logPasswordBox" 
+                Name="passwordBox" 
                 MaxLength="20"
                 Foreground="Black"
                 FontWeight="Light" 
@@ -84,10 +84,25 @@
                 Background="White"
                 BorderThickness="0"
                 Opacity="0.2"/>
-            <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
-                <Button Click="Login" Width="100" FontSize="21" FontWeight="Light" Height="35" Content="Login" Margin="30,0,60,0" Background="Transparent" Foreground="White" BorderThickness="0"/>
-                <Button Click="Register" Width="100" FontSize="21" FontWeight="Light" Height="35" Content="Register" Background="Transparent" Foreground="White" BorderThickness="0"/>
-            </StackPanel>
+            <Label 
+                Content="Repeat password" 
+                Foreground="White"
+                FontWeight="Light" 
+                FontSize="21"
+                Background="Transparent"
+                HorizontalAlignment="Left" 
+                BorderThickness="0"
+                Opacity="0.7"/>
+            <PasswordBox 
+                Name="repPasswordBox" 
+                MaxLength="20"
+                Foreground="Black"
+                FontWeight="Light" 
+                FontSize="21"
+                Background="White"
+                BorderThickness="0"
+                Opacity="0.2"/>
+            <Button Click="Registration" Width="100" FontSize="21" FontWeight="Light" Height="35" Content="Register" Margin="20,20,30,0" Background="Transparent" Foreground="White" BorderThickness="0"/>
         </StackPanel>
 
     </Grid>

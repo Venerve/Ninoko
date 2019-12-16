@@ -12,12 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Security.Cryptography;
+//using Ninoko.Logics;
+//using Newtonsoft.Json;
+
 
 namespace Ninoko
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -29,15 +34,19 @@ namespace Ninoko
 
         private void Login(object sender, RoutedEventArgs e)
         {
-            //if (loginBox.Text.ToString().In(SmartParkingApp.users.ToString()) & passwordBox.Text.ToString().In(SmartParkingApp.users.ToString()))
-            //{
-            //    LoginBox = loginBox.Text.ToString();
-            //    var window = new ClientPageWindow(LoginBox);
-            //    window.ShowDialog();
-            //}
-
+            //    if (logUsernameBox.Text.ToString().In(NinokoLogics.users.ToString()) & logPasswordBox.ToString().In(NinokoLogics.users.ToString()))
+            //    {
+            //        LoginBox = logUsernameBox.Text.ToString();
+            //        var window = new UsersPersonalWindow(LoginBox);
+            //        window.ShowDialog();
+            //    }
         }
 
+        private void Register(object sender, RoutedEventArgs e)
+        {
+            var window = new RegisterWindow();
+            window.ShowDialog();
+        }
         private void Exit(object sender, RoutedEventArgs e)
         {
             Close();
