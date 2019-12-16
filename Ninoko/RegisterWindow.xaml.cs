@@ -9,8 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-//using Ninoko.Logics;
-//using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System.Linq;
 
 
@@ -40,13 +39,13 @@ namespace Ninoko
         {
             if (passwordBox != repPasswordBox)
             {
-                //var window = new HelperWindow((int)NinokoLogics.ErrorType.PasswordsDontMatch);
-                //window.ShowDialog();
+                var window = new HelperWindow((int)NinokoLogics.ErrorType.PasswordsDontMatch);
+                window.ShowDialog();
             }
-            //if (userameBox.Text.In(NinokoLogics.users.ToString()))
-            //{
+            if (userameBox.Text.In(NinokoLogics.users.ToString()))
+            {
 
-            //}
+            }
             else
             {
 

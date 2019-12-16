@@ -34,12 +34,12 @@ namespace Ninoko
 
         private void Login(object sender, RoutedEventArgs e)
         {
-            //    if (logUsernameBox.Text.ToString().In(NinokoLogics.users.ToString()) & logPasswordBox.ToString().In(NinokoLogics.users.ToString()))
-            //    {
-            //        LoginBox = logUsernameBox.Text.ToString();
-            //        var window = new UsersPersonalWindow(LoginBox);
-            //        window.ShowDialog();
-            //    }
+            if (logUsernameBox.Text.ToString().In(NinokoLogics.users.ToString()) & logPasswordBox.ToString().In(NinokoLogics.users.ToString()))
+            {
+                LoginBox = logUsernameBox.Text.ToString();
+                var window = new UsersPersonalWindow(LoginBox);
+                window.ShowDialog();
+            }
         }
 
         private void Register(object sender, RoutedEventArgs e)

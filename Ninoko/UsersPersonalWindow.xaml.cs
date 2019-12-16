@@ -17,7 +17,7 @@ namespace Ninoko
     /// </summary>
     public partial class UsersPersonalWindow : Window
     {
-        public UsersPersonalWindow()
+        public UsersPersonalWindow(string LoginBox)
         {
             InitializeComponent();
         }
