@@ -17,5 +17,94 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
+        <TabControl>
+            <!--1st lang English-->
+            <TabItem  Width="170" HorizontalContentAlignment="Center"  Name="English">
+                <TabItem.Header>
+                    <StackPanel Width="70">
+                        <Border CornerRadius="20" Grid.RowSpan="5">
+                            <Border.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="CornflowerBlue" Offset="0.0"/>
+                                    <GradientStop Color="Plum" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock Text="  English" Width="50" Height="20" />
+                        </Border>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Width="800">
+                    <!--Design-->
+                    <Border CornerRadius="15" Grid.ColumnSpan="2">
+                        <Border.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="CornflowerBlue" Offset="0.0"/>
+                                <GradientStop Color="Plum" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+                    <!--Buttons-->
+
+                </Grid>
+            </TabItem>
+            <!--2nd lang Japanese-->
+            <TabItem   Width="170" HorizontalContentAlignment="Center"  Name="Japanese">
+                <TabItem.Header>
+                    <StackPanel Width="70">
+                        <Border CornerRadius="20" Grid.RowSpan="5">
+                            <Border.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="CornflowerBlue" Offset="0.0"/>
+                                    <GradientStop Color="Plum" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock Text="Japanese" Width="50" Height="20" />
+                        </Border>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Width="800">
+                    <!--Design-->
+                    <Border CornerRadius="15" Grid.RowSpan="2">
+                        <Border.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="CornflowerBlue" Offset="0.0"/>
+                                <GradientStop Color="Plum" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+                    <!--Buttons-->
+
+                </Grid>
+            </TabItem>
+            <!--3rd lang Spanish-->
+            <TabItem Width="170" HorizontalContentAlignment="Center"  Name="Spanish">
+                <TabItem.Header>
+                    <StackPanel Width="70">
+                        <Border CornerRadius="20" Grid.RowSpan="5">
+                            <Border.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="CornflowerBlue" Offset="0.0"/>
+                                    <GradientStop Color="Plum" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock Text=" Spanish" Width="50" Height="20" />
+                        </Border>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Width="800">
+                    <!--Design-->
+                    <Border CornerRadius="15" Grid.RowSpan="2">
+                        <Border.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="CornflowerBlue" Offset="0.0"/>
+                                <GradientStop Color="Plum" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+                    <!--Buttons-->
+
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

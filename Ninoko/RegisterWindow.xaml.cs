@@ -20,6 +20,7 @@ namespace Ninoko
     /// </summary>
     static class Extensions
     {
+        //Не понимаю, для чего нужен этот метод?
         public static bool In<T>(this T item, params T[] items)
         {
             if (items == null)
@@ -39,17 +40,24 @@ namespace Ninoko
         {
             if (passwordBox != repPasswordBox)
             {
-                var window = new HelperWindow((int)NinokoLogics.ErrorType.PasswordsDontMatch);
-                window.ShowDialog();
+                MessageBox.Show("Password don't match!", "Passwords", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
-            if (userameBox.Text.In(NinokoLogics.users.ToString()))
-            {
 
-            }
-            else
+            if ((string.IsNullOrEmpty(userameBox.Text) | (string.IsNullOrEmpty(passwordBox.Password) | (string.IsNullOrEmpty(repPasswordBox.Password))
             {
-
+                MessageBox.Show("Error! Every field should be filled!", "Filling error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
+
+            //if (userameBox.Text.In(NinokoLogics.users.ToString()))
+            //{
+
+                //}
+                //else
+                //{
+
+                //}
         }
 
         private void Exit(object sender, RoutedEventArgs e)
