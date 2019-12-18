@@ -1,0 +1,60 @@
+﻿<Window x:Class="Ninoko.Level2_4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ninoko"
+        mc:Ignorable="d"
+        Title="Level2_4" Height="450" Width="800">
+    <Grid>
+        <Border CornerRadius="15" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="CornflowerBlue" Offset="0.0"/>
+                    <GradientStop Color="Plum" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180"/>
+                <ColumnDefinition Width="450"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+            <TextBlock Margin="-20 0 0 0" Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                       Text="Choose an appropriate picture for word:" 
+                       FontFamily="Poor Richard" FontSize="20"/>
+            <!--The word-->
+            <StackPanel Grid.Row="1" Grid.Column="1">
+                <TextBlock Margin="-27 16 0 0" 
+                       HorizontalAlignment="Center" Text="Word"
+                       FontFamily="Poor Richard" FontSize="20"
+                       Name="TheWordIn5" />
+                
+            </StackPanel>
+            <!--The pictures-->
+            <StackPanel Grid.Row="2" Grid.Column="1">
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton Margin="35 10 30 0" Content="1" GroupName="Animals" />
+                    <RadioButton Margin="60 10 30 0" Content="2" GroupName="Animals" />
+                    <RadioButton Margin="50 10 30 0" Content="3" GroupName="Animals" />
+                    <RadioButton Margin="55 10 30 0" Content="4" GroupName="Animals" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                <Image Margin="0 0 10 0" Source="Photos/kitten.jpg" Width="100" Height="100"/>
+                <Image Margin="0 0 10 0" Source="Photos/puppy.jfif" Width="100" Height="100"/>
+                <Image Margin="0 0 10 0" Source="Photos/lizard.jpg" Width="100" Height="100"/>
+                <Image Source="Photos/parrot.jpg" Width="100" Height="100"/>
+                </StackPanel>
+            </StackPanel>
+
+        </Grid>
+        
+
+    </Grid>
+</Window>

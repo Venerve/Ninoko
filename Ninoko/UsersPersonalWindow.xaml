@@ -44,7 +44,29 @@
                         </Border.Background>
                     </Border>
                     <!--Buttons-->
-
+                    <Grid>
+                        <Button Margin="75 90 0 200" Width="140" Height="110" 
+                                HorizontalAlignment="Left" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" 
+                                Content="1st level" FontFamily="Poor Richard" FontSize="25" />
+                        <Button  Margin="300 90 0 0" Width="140" Height="110" 
+                                 HorizontalAlignment="Left" VerticalAlignment="Top"
+                                 Background="Transparent" 
+                                 Cursor="Hand" BorderThickness="0.0" 
+                                 Content="2nd level" FontFamily="Poor Richard" FontSize="25" />
+                        <Button Margin="0 90 105 200"  Width="140" Height="110" 
+                                HorizontalAlignment="Right" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" 
+                                Content="3rd level" FontFamily="Poor Richard" FontSize="25"/>
+                        <Button  Margin="180 250 0 35" Width="140" Height="110" 
+                                 HorizontalAlignment="Left" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" 
+                                Content="4th level" FontFamily="Poor Richard" FontSize="25"/>
+                        <Button Margin="420 255 0 35" Width="140" Height="110" 
+                                HorizontalAlignment="Left" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" 
+                                Content="5th level" FontFamily="Poor Richard" FontSize="25"/>
+                    </Grid>
                 </Grid>
             </TabItem>
             <!--2nd lang Japanese-->
@@ -73,7 +95,30 @@
                         </Border.Background>
                     </Border>
                     <!--Buttons-->
-
+                    <!--Buttons-->
+                    <Grid>
+                        <Button Margin="75 90 0 200" Width="140" Height="110" 
+                                HorizontalAlignment="Left" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" 
+                                Content="1st level" FontFamily="Poor Richard" FontSize="25" />
+                        <Button  Margin="300 90 0 0" Width="140" Height="110" 
+                                 HorizontalAlignment="Left" VerticalAlignment="Top"
+                                 Background="Transparent" 
+                                 Cursor="Hand" BorderThickness="0.0" 
+                                 Content="2nd level" FontFamily="Poor Richard" FontSize="25" />
+                        <Button Margin="0 90 105 200"  Width="140" Height="110" 
+                                HorizontalAlignment="Right" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" 
+                                Content="3rd level" FontFamily="Poor Richard" FontSize="25"/>
+                        <Button  Margin="180 250 0 35" Width="140" Height="110" 
+                                 HorizontalAlignment="Left" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" 
+                                Content="4th level" FontFamily="Poor Richard" FontSize="25"/>
+                        <Button Margin="420 255 0 35" Width="140" Height="110" 
+                                HorizontalAlignment="Left" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" 
+                                Content="5th level" FontFamily="Poor Richard" FontSize="25"/>
+                    </Grid>
                 </Grid>
             </TabItem>
             <!--3rd lang Spanish-->
@@ -102,7 +147,30 @@
                         </Border.Background>
                     </Border>
                     <!--Buttons-->
-
+                    <!--Buttons-->
+                    <Grid>
+                        <Button Margin="75 90 0 200" Width="140" Height="110" 
+                                HorizontalAlignment="Left" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" 
+                                Content="1st level" FontFamily="Poor Richard" FontSize="25" />
+                        <Button  Margin="300 90 0 0" Width="140" Height="110" 
+                                 HorizontalAlignment="Left" VerticalAlignment="Top"
+                                 Background="Transparent" 
+                                 Cursor="Hand" BorderThickness="0.0" 
+                                 Content="2nd level" FontFamily="Poor Richard" FontSize="25" />
+                        <Button Margin="0 90 105 200"  Width="140" Height="110" 
+                                HorizontalAlignment="Right" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" 
+                                Content="3rd level" FontFamily="Poor Richard" FontSize="25"/>
+                        <Button  Margin="180 250 0 35" Width="140" Height="110" 
+                                 HorizontalAlignment="Left" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" 
+                                Content="4th level" FontFamily="Poor Richard" FontSize="25"/>
+                        <Button Margin="420 255 0 35" Width="140" Height="110" 
+                                HorizontalAlignment="Left" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" 
+                                Content="5th level" FontFamily="Poor Richard" FontSize="25"/>
+                    </Grid>
                 </Grid>
             </TabItem>
         </TabControl>
