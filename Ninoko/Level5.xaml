@@ -17,9 +17,9 @@
         </Border>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="180"/>
-                <ColumnDefinition Width="450"/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="530"/>
+                <ColumnDefinition Width="70"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
@@ -28,28 +28,28 @@
             </Grid.RowDefinitions>
             <TextBlock Margin="-20 0 0 0" Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center"
                        Text="Choose an appropriate picture for word:" 
-                       FontFamily="Poor Richard" FontSize="20"/>
+                       FontFamily="Poor Richard" FontSize="20" Foreground="White" FontWeight="Light"/>
             <!--The word-->
-            <StackPanel Grid.Row="1" Grid.Column="1">
-                <TextBlock Margin="-27 16 0 0" 
-                       HorizontalAlignment="Center" Text="Word"
-                       FontFamily="Poor Richard" FontSize="20"
-                       Name="TheWordIn5" />
+            
+                <TextBlock Margin="-27 16 0 0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"
+                           Text="Word" Foreground="White" FontWeight="Light"
+                           FontFamily="Poor Richard" FontSize="20"
+                           Name="TheWordIn5" />
                 
-            </StackPanel>
+            
             <!--The pictures-->
             <StackPanel Grid.Row="2" Grid.Column="1">
                 <StackPanel Orientation="Horizontal">
-                    <RadioButton Margin="35 10 30 0" Content="1" GroupName="Animals" />
-                    <RadioButton Margin="60 10 30 0" Content="2" GroupName="Animals" />
-                    <RadioButton Margin="50 10 30 0" Content="3" GroupName="Animals" />
-                    <RadioButton Margin="55 10 30 0" Content="4" GroupName="Animals" />
+                    <RadioButton Margin="50 10 30 0" Content="1" GroupName="Animals" Foreground="White" FontWeight="Light"/>
+                    <RadioButton Margin="80 10 30 0" Content="2" GroupName="Animals" Foreground="White" FontWeight="Light"/>
+                    <RadioButton Margin="70 10 30 0" Content="3" GroupName="Animals" Foreground="White" FontWeight="Light"/>
+                    <RadioButton Margin="80 10 30 0" Content="4" GroupName="Animals" Foreground="White" FontWeight="Light"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                <Image Margin="0 0 10 0" Source="Photos/kitten.jpg" Width="100" Height="100"/>
-                <Image Margin="0 0 10 0" Source="Photos/puppy.jfif" Width="100" Height="100"/>
-                <Image Margin="0 0 10 0" Source="Photos/lizard.jpg" Width="100" Height="100"/>
-                <Image Source="Photos/parrot.jpg" Width="100" Height="100"/>
+                <Image Margin="0 0 10 0" Source="Photos/kitten.jpg" Width="125" Height="110"/>
+                <Image Margin="0 0 10 0" Source="Photos/puppy.jfif" Width="125" Height="110"/>
+                <Image Margin="0 0 10 0" Source="Photos/lizard.jpg" Width="125" Height="110"/>
+                <Image Source="Photos/parrot.jpg" Width="125" Height="110"/>
                 </StackPanel>
             </StackPanel>
 

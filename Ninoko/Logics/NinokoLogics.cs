@@ -11,13 +11,26 @@ namespace Ninoko
     public class NinokoLogics
     {
         public List<User> users;
+        private static int _idCounter = 1;
 
-        static void Main(string[] args)
-        {
-            var ninoko = new NinokoLogics();
-        }
+        public NinokoLogics()
+        { LoadData(); }
 
         public const string UsersFile = "data/users.json";
+
+        public void Registration(string phone, string password)
+        {
+            _idCounter++;
+            users.Add(new Models.User
+            {
+                Id = _idCounter,
+                UserPhone = phone,
+                Password = password,
+                CurrentLevel = 1
+            });
+            Serialize(UsersFile, users);
+        }
+              
 
         public void LoadData()
         {

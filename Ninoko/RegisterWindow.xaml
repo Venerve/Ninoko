@@ -49,7 +49,7 @@
 
         <StackPanel Grid.Row="1" Margin="20">
             <Label
-                Content="Username" 
+                Content="UserPhone" 
                 Foreground="White"
                 FontWeight="Light" 
                 FontSize="21"
@@ -58,7 +58,7 @@
                 BorderThickness="0"
                 Opacity="0.7"/>
             <TextBox 
-                Name="userameBox" 
+                Name="userphoneBox" 
                 MaxLength="20"
                 Foreground="Black"
                 FontWeight="Light" 
@@ -102,7 +102,10 @@
                 Background="White"
                 BorderThickness="0"
                 Opacity="0.2"/>
-            <Button Click="Registration" Width="100" FontSize="21" FontWeight="Light" Height="35" Content="Register" Margin="20,20,30,0" Background="Transparent" Foreground="White" BorderThickness="0"/>
+            <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+                <Button Click="LoginClick" Width="100" FontSize="21" FontWeight="Light" Height="35" Content="Login" Margin="0,0,50,0" Background="Transparent" Foreground="White" BorderThickness="0"/>
+                <Button Click="RegisterClick" Width="100" FontSize="21" FontWeight="Light" Height="35" Content="Register" Background="Transparent" Foreground="White" BorderThickness="0"/>
+            </StackPanel>
         </StackPanel>
 
     </Grid>

@@ -1,6 +1,7 @@
 ﻿[
   {
-    "Username": "Robert",
+    "Id": "1",
+    "UserPhone": "+79375363617",
     "Password": "robert123",
     "CurrentLevel": "3"
   }

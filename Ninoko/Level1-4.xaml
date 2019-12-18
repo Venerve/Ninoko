@@ -15,6 +15,60 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="530"/>
+                <ColumnDefinition Width="70"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+            <!--description-->
+            <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center"
+                       Text="Choose the right answer" VerticalAlignment="Bottom" 
+                       FontSize="25" FontFamily="Poor Richard" 
+                       Foreground="White" FontWeight="Light"/>
+            <!--Question-->
+            <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"
+                       VerticalAlignment="Bottom" Name="question"
+                       FontSize="20" FontFamily="Poor Richard"
+                       Foreground="White" FontWeight="Light" Margin="0 0 0 10"/>
+            <!--Answers-->
+            <StackPanel Grid.Row="2" Grid.Column="1">
+                <StackPanel  Margin="0 20 0 0" Orientation="Horizontal">
+                    <Button  Content="1: " BorderThickness="0.0" 
+                                 FontFamily="Poor Richard" FontSize="20" 
+                                 Background="Transparent" Foreground="White"
+                                 Cursor="Hand" Click="firstAnswer" />
+                    <TextBlock Name="firstAnswer"/>
+                </StackPanel>
+                <StackPanel  Margin="0 20 0 0" Orientation="Horizontal">
+                    <Button  Content="2: " BorderThickness="0.0" 
+                                 FontFamily="Poor Richard" FontSize="20" 
+                                 Background="Transparent" Foreground="White"
+                                 Cursor="Hand" Click="firstAnswer" />
+                    <TextBlock Name="secondAnswer"/>
+                </StackPanel>
+                <StackPanel  Margin="0 20 0 0" Orientation="Horizontal">
+                    <Button  Content="3: " BorderThickness="0.0" 
+                                 FontFamily="Poor Richard" FontSize="20" 
+                                 Background="Transparent" Foreground="White"
+                                 Cursor="Hand" Click="firstAnswer" />
+                    <TextBlock Name="thirdAnswer"/>
+                </StackPanel>
+                <StackPanel  Margin="0 20 0 0" Orientation="Horizontal">
+                    <Button  Content="4: " BorderThickness="0.0" 
+                                 FontFamily="Poor Richard" FontSize="20" 
+                                 Background="Transparent" Foreground="White"
+                                 Cursor="Hand" Click="firstAnswer" />
+                    <TextBlock Name="fourthAnswer"/>
+                </StackPanel>
+            </StackPanel>
+
+        </Grid>
+
     </Grid>
 </Window>

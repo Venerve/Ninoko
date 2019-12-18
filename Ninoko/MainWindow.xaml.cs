@@ -25,6 +25,7 @@ namespace Ninoko
 
     public partial class MainWindow : Window
     {
+        public readonly NinokoLogics _logics = new NinokoLogics();
         public MainWindow()
         {
             InitializeComponent();
@@ -34,9 +35,16 @@ namespace Ninoko
 
         private void Login(object sender, RoutedEventArgs e)
         {
-            if (logUsernameBox.Text.ToString().In(NinokoLogics.users.ToString()) & logPasswordBox.ToString().In(NinokoLogics.users.ToString()))
+            if ((string.IsNullOrEmpty(logUserPhoneBox.Text) | (string.IsNullOrEmpty(logPasswordBox.Password))))
             {
-                LoginBox = logUsernameBox.Text.ToString();
+                MessageBox.Show("Error! Every field should be filled!", "Filling error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (_logics.users
+                .Any(value => value.UserPhone.Contains(logUserPhoneBox.Text)))
+            {
+                LoginBox = logUserPhoneBox.Text.ToString();
+
                 var window = new UsersPersonalWindow(LoginBox);
                 window.ShowDialog();
             }
