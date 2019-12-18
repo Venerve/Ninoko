@@ -18,24 +18,23 @@ namespace Ninoko
 
         public const string UsersFile = "data/users.json";
 
-        public void Registration(string phone, string password)
+        public void Registration(string name, string password)
         {
-            _idCounter++;
+            
             users.Add(new Models.User
             {
-                Id = _idCounter,
-                UserPhone = phone,
+                Username = name,
                 Password = password,
                 CurrentLevel = 1
             });
             Serialize(UsersFile, users);
         }
               
-
         public void LoadData()
         {
             users = Deserialize<List<User>>(UsersFile);
         }
+
         public void AddUser(User newUser)
         {
             users.Add(newUser);

@@ -43,24 +43,24 @@ namespace Ninoko
 
             if (passwordBox != repPasswordBox)
             {
-                MessageBox.Show("Password don't match!", "Passwords", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Passwords don't match!", "Passwords", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            if ((string.IsNullOrEmpty(userphoneBox.Text) | (string.IsNullOrEmpty(passwordBox.Password) | (string.IsNullOrEmpty(repPasswordBox.Password))
+            else if ((string.IsNullOrEmpty(usernameBox.Text) | (string.IsNullOrEmpty(passwordBox.Password) | (string.IsNullOrEmpty(repPasswordBox.Password)))))
             {
-                MessageBox.Show("Error! Every field should be filled!", "Filling error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Every field should be filled!", "Filling error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            if (!_logics.users
-                .Any(value => value.UserPhone.Contains(userphoneBox.Text)))
+            else if (!_logics.users
+                .Any(value => value.Username.Contains(usernameBox.Text)))
             {
-                _logics.Registration(userphoneBox.Text, repPasswordBox.Password);
+                _logics.Registration(usernameBox.Text, repPasswordBox.Password);
             }
             else
             {
-                MessageBox.Show("You've aleady registrated. Please, enter 'Login' page.", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("User already exists. Please, write other username or click 'Login'.", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 

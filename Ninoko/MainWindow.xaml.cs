@@ -35,16 +35,16 @@ namespace Ninoko
 
         private void Login(object sender, RoutedEventArgs e)
         {
-            if ((string.IsNullOrEmpty(logUserPhoneBox.Text) | (string.IsNullOrEmpty(logPasswordBox.Password))))
+            if ((string.IsNullOrEmpty(logUsernameBox.Text) | (string.IsNullOrEmpty(logPasswordBox.Password))))
             {
-                MessageBox.Show("Error! Every field should be filled!", "Filling error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Every field should be filled!", "Filling error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             if (_logics.users
-                .Any(value => value.UserPhone.Contains(logUserPhoneBox.Text)))
+                .Any(value => value.Username.Contains(logUsernameBox.Text)))
             {
-                LoginBox = logUserPhoneBox.Text.ToString();
-
+                LoginBox = logUsernameBox.Text.ToString();
+                
                 var window = new UsersPersonalWindow(LoginBox);
                 window.ShowDialog();
             }

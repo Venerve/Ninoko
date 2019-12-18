@@ -21,5 +21,25 @@ namespace Ninoko
         {
             InitializeComponent();
         }
+
+        private void FirstAnswer(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void SecondAnswer(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void ThirdAnswer(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void FourthAnswer(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

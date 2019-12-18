@@ -15,9 +15,9 @@ namespace Ninoko
     /// <summary>
     /// Логика взаимодействия для Level2_4.xaml
     /// </summary>
-    public partial class Level2_4 : Window
+    public partial class Level5 : Window
     {
-        public Level2_4()
+        public Level5()
         {
             InitializeComponent();
         }

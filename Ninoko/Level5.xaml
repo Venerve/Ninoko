@@ -1,11 +1,13 @@
-﻿<Window x:Class="Ninoko.Level2_4"
+﻿<Window x:Class="Ninoko.Level5"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ninoko"
         mc:Ignorable="d"
-        Title="Level2_4" Height="450" Width="800">
+        Title="Level2_4" Height="450" Width="800"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Border CornerRadius="15" Grid.RowSpan="2">
             <Border.Background>
@@ -17,7 +19,7 @@
         </Border>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="130"/>
                 <ColumnDefinition Width="530"/>
                 <ColumnDefinition Width="70"/>
             </Grid.ColumnDefinitions>
@@ -27,23 +29,23 @@
                 <RowDefinition Height="200"/>
             </Grid.RowDefinitions>
             <TextBlock Margin="-20 0 0 0" Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center"
-                       Text="Choose an appropriate picture for word:" 
-                       FontFamily="Poor Richard" FontSize="20" Foreground="White" FontWeight="Light"/>
+                       Text="Choose the correct picture for a word:" 
+                       FontWeight="Light" FontSize="23" Foreground="White"/>
             <!--The word-->
             
                 <TextBlock Margin="-27 16 0 0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"
-                           Text="Word" Foreground="White" FontWeight="Light"
-                           FontFamily="Poor Richard" FontSize="20"
+                           Text="Word" Foreground="White"
+                           FontWeight="Light" FontSize="23"
                            Name="TheWordIn5" />
                 
             
             <!--The pictures-->
             <StackPanel Grid.Row="2" Grid.Column="1">
                 <StackPanel Orientation="Horizontal">
-                    <RadioButton Margin="50 10 30 0" Content="1" GroupName="Animals" Foreground="White" FontWeight="Light"/>
-                    <RadioButton Margin="80 10 30 0" Content="2" GroupName="Animals" Foreground="White" FontWeight="Light"/>
-                    <RadioButton Margin="70 10 30 0" Content="3" GroupName="Animals" Foreground="White" FontWeight="Light"/>
-                    <RadioButton Margin="80 10 30 0" Content="4" GroupName="Animals" Foreground="White" FontWeight="Light"/>
+                    <RadioButton Margin="60 10 30 0" FontSize="23" GroupName="Animals" Foreground="White" FontWeight="Light"/>
+                    <RadioButton Margin="85 10 30 0" GroupName="Animals" Foreground="White" FontWeight="Light"/>
+                    <RadioButton Margin="85 10 30 0" GroupName="Animals" Foreground="White" FontWeight="Light"/>
+                    <RadioButton Margin="85 10 30 0" GroupName="Animals" Foreground="White" FontWeight="Light"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                 <Image Margin="0 0 10 0" Source="Photos/kitten.jpg" Width="125" Height="110"/>

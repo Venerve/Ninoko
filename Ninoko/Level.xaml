@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ninoko"
         mc:Ignorable="d"
-        Title="Level" Height="450" Width="800">
+        Title="Level" Height="450" Width="800"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Border CornerRadius="15" Grid.RowSpan="2">
             <Border.Background>
@@ -24,13 +26,13 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="200"/>
+                <RowDefinition Height="210"/>
             </Grid.RowDefinitions>
             <!--description-->
             <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center"
                        Text="Choose the right answer" VerticalAlignment="Bottom" 
-                       FontSize="25" FontFamily="Poor Richard" 
-                       Foreground="White" FontWeight="Light"/>
+                       FontSize="25" FontWeight="Light"
+                       Foreground="White"/>
             <!--Question-->
             <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"
                        VerticalAlignment="Bottom" Name="question"
@@ -40,31 +42,39 @@
             <StackPanel Grid.Row="2" Grid.Column="1">
                 <StackPanel  Margin="0 20 0 0" Orientation="Horizontal">
                     <Button  Content="1: " BorderThickness="0.0" 
-                                 FontFamily="Poor Richard" FontSize="20" 
+                                 FontWeight="Light" FontSize="23" 
                                  Background="Transparent" Foreground="White"
-                                 Cursor="Hand" Click="firstAnswer" />
-                    <TextBlock Name="firstAnswer"/>
+                                 Cursor="Hand" Click="FirstAnswer"/>
+                    <TextBlock Name="firstAnswer" Foreground="White"
+                                 FontWeight="Light" FontSize="23" 
+                                 Background="Transparent"/>
                 </StackPanel>
                 <StackPanel  Margin="0 20 0 0" Orientation="Horizontal">
                     <Button  Content="2: " BorderThickness="0.0" 
-                                 FontFamily="Poor Richard" FontSize="20" 
+                                 FontWeight="Light" FontSize="23" 
                                  Background="Transparent" Foreground="White"
-                                 Cursor="Hand" Click="firstAnswer" />
-                    <TextBlock Name="secondAnswer"/>
+                                 Cursor="Hand" Click="SecondAnswer" />
+                    <TextBlock Name="secondAnswer" Foreground="White"
+                                 FontWeight="Light" FontSize="23" 
+                                 Background="Transparent"/>
                 </StackPanel>
                 <StackPanel  Margin="0 20 0 0" Orientation="Horizontal">
                     <Button  Content="3: " BorderThickness="0.0" 
-                                 FontFamily="Poor Richard" FontSize="20" 
+                                 FontWeight="Light" FontSize="23" 
                                  Background="Transparent" Foreground="White"
-                                 Cursor="Hand" Click="firstAnswer" />
-                    <TextBlock Name="thirdAnswer"/>
+                                 Cursor="Hand" Click="ThirdAnswer" />
+                    <TextBlock Name="thirdAnswer" Foreground="White"
+                                 FontWeight="Light" FontSize="23" 
+                                 Background="Transparent"/>
                 </StackPanel>
                 <StackPanel  Margin="0 20 0 0" Orientation="Horizontal">
                     <Button  Content="4: " BorderThickness="0.0" 
-                                 FontFamily="Poor Richard" FontSize="20" 
+                                 FontWeight="Light" FontSize="23" 
                                  Background="Transparent" Foreground="White"
-                                 Cursor="Hand" Click="firstAnswer" />
-                    <TextBlock Name="fourthAnswer"/>
+                                 Cursor="Hand" Click="FourthAnswer" />
+                    <TextBlock Name="fourthAnswer" Foreground="White"
+                                 FontWeight="Light" FontSize="23" 
+                                 Background="Transparent"/>
                 </StackPanel>
             </StackPanel>
 

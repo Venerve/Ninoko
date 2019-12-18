@@ -49,7 +49,7 @@
 
         <StackPanel Grid.Row="1" Margin="20">
             <Label
-                Content="UserPhone" 
+                Content="Username" 
                 Foreground="White"
                 FontWeight="Light" 
                 FontSize="21"
@@ -58,7 +58,7 @@
                 BorderThickness="0"
                 Opacity="0.7"/>
             <TextBox 
-                Name="userphoneBox" 
+                Name="usernameBox" 
                 MaxLength="20"
                 Foreground="Black"
                 FontWeight="Light" 

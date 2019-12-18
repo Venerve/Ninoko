@@ -9,6 +9,8 @@
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
+        
+        
         <Border CornerRadius="15" Grid.RowSpan="2">
             <Border.Background>
                 <LinearGradientBrush>
@@ -17,25 +19,79 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-        <TabControl>
-            <!--1st lang English-->
-            <TabItem  Width="170" HorizontalContentAlignment="Center"  Name="English">
+
+        
+        <TabControl Background="Transparent">
+            <!--1st language - English-->
+            <TabItem  Width="170" HorizontalContentAlignment="Center"  Name="English" RenderTransformOrigin="0.553,0.501">
                 <TabItem.Header>
-                    <StackPanel Width="70">
-                        <Border CornerRadius="20" Grid.RowSpan="5">
+                    <StackPanel >
+                        <Border>
+                            <Border.Background >
+                                <LinearGradientBrush>
+                                    <GradientStop Color="CornflowerBlue" Offset="0.0"/>
+                                    <GradientStop Color="Plum" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock Text="        English" FontSize="23"  Width="170" Height="40" Foreground="White" FontWeight="Light"/>
+                        </Border>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid Width="800">
+                    <!--Design-->
+                    <Border>
+
+                    </Border>
+                    <!--Buttons-->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="246*"/>
+                            <ColumnDefinition Width="549*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Button Margin="70,90,0,182" Width="140" Height="110" 
+                                HorizontalAlignment="Left" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" Foreground="White" 
+                                Content="1st level" FontWeight="Light" FontSize="23" Grid.Column="1" />
+                        <Button  Margin="49,90,0,0" Width="140" Height="110" 
+                                 HorizontalAlignment="Left" VerticalAlignment="Top"
+                                 Background="Transparent" Foreground="White" 
+                                 Cursor="Hand" BorderThickness="0.0" 
+                                 Content="2nd level" FontWeight="Light" FontSize="23" Grid.Column="2" />
+                        <Button Margin="0,90,105,182"  Width="140" Height="110" 
+                                HorizontalAlignment="Right" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" Foreground="White" 
+                                Content="3rd level" FontWeight="Light" FontSize="23" Grid.Column="2"/>
+                        <Button  Margin="175,250,0,22" Width="140" Height="110" Foreground="White" 
+                                 HorizontalAlignment="Left" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" 
+                                Content="4th level" FontWeight="Light" FontSize="23" Grid.ColumnSpan="2" Grid.Column="1"/>
+                        <Button Margin="169,255,0,17" Width="140" Height="110" 
+                                HorizontalAlignment="Left" Background="Transparent" 
+                                Cursor="Hand" BorderThickness="0.0" Foreground="White" 
+                                Content="5th level" FontWeight="Light" FontSize="23" Grid.Column="2"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <!--2nd language  - Japanese-->
+            <TabItem Width="170" HorizontalContentAlignment="Center" Name="Japanese">
+                <TabItem.Header>
+                    <StackPanel>
+                        <Border>
                             <Border.Background>
                                 <LinearGradientBrush>
                                     <GradientStop Color="CornflowerBlue" Offset="0.0"/>
                                     <GradientStop Color="Plum" Offset="1"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <TextBlock Text="  English" Width="50" Height="20" Foreground="White" FontWeight="Light"/>
+                            <TextBlock Text="       Japanese" FontSize="23" HorizontalAlignment="Center" Width="170" Height="40" Foreground="White" FontWeight="Light" RenderTransformOrigin="-0.016,0.501"/>
                         </Border>
                     </StackPanel>
                 </TabItem.Header>
                 <Grid Width="800">
                     <!--Design-->
-                    <Border CornerRadius="15" Grid.ColumnSpan="2">
+                    <Border Grid.RowSpan="2">
                         <Border.Background>
                             <LinearGradientBrush>
                                 <GradientStop Color="CornflowerBlue" Offset="0.0"/>
@@ -46,134 +102,81 @@
                     <!--Buttons-->
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="71*"/>
-                            <ColumnDefinition Width="729*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="246*"/>
+                            <ColumnDefinition Width="549*"/>
                         </Grid.ColumnDefinitions>
-                        <Button Margin="4,91,0,201" Width="140" Height="110" 
+                        <Button Margin="70,90,0,182" Width="140" Height="110" 
                                 HorizontalAlignment="Left" Background="Transparent" 
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
-                                Content="1st level" FontFamily="Poor Richard" FontSize="25" Grid.Column="1" />
-                        <Button  Margin="229,90,0,0" Width="140" Height="110" 
+                                Content="1st level" FontWeight="Light" FontSize="23" Grid.Column="1" />
+                        <Button  Margin="49,90,0,0" Width="140" Height="110" 
                                  HorizontalAlignment="Left" VerticalAlignment="Top"
                                  Background="Transparent" Foreground="White" 
                                  Cursor="Hand" BorderThickness="0.0" 
-                                 Content="2nd level" FontFamily="Poor Richard" FontSize="25" Grid.Column="1" />
-                        <Button Margin="0,91,105,201"  Width="140" Height="110" 
+                                 Content="2nd level" FontWeight="Light" FontSize="23" Grid.Column="2" />
+                        <Button Margin="0,90,105,182"  Width="140" Height="110" 
                                 HorizontalAlignment="Right" Background="Transparent" 
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
-                                Content="3rd level" FontFamily="Poor Richard" FontSize="25" Grid.Column="1"/>
-                        <Button  Margin="109,254,0,38" Width="140" Height="110" Foreground="White" 
+                                Content="3rd level" FontWeight="Light" FontSize="23" Grid.Column="2"/>
+                        <Button  Margin="175,250,0,22" Width="140" Height="110" Foreground="White" 
                                  HorizontalAlignment="Left" Background="Transparent" 
                                 Cursor="Hand" BorderThickness="0.0" 
-                                Content="4th level" FontFamily="Poor Richard" FontSize="25" Grid.Column="1"/>
-                        <Button Margin="349,256,0,36" Width="140" Height="110" 
+                                Content="4th level" FontWeight="Light" FontSize="23" Grid.ColumnSpan="2" Grid.Column="1"/>
+                        <Button Margin="169,255,0,17" Width="140" Height="110" 
                                 HorizontalAlignment="Left" Background="Transparent" 
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
-                                Content="5th level" FontFamily="Poor Richard" FontSize="25" Grid.Column="1"/>
+                                Content="5th level" FontWeight="Light" FontSize="23" Grid.Column="2"/>
                     </Grid>
                 </Grid>
             </TabItem>
-            <!--2nd lang Japanese-->
-            <TabItem   Width="170" HorizontalContentAlignment="Center"  Name="Japanese">
-                <TabItem.Header>
-                    <StackPanel Width="70">
-                        <Border CornerRadius="20" Grid.RowSpan="5">
-                            <Border.Background>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="CornflowerBlue" Offset="0.0"/>
-                                    <GradientStop Color="Plum" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Border.Background>
-                            <TextBlock Text="Japanese" Width="50" Height="20" Foreground="White" FontWeight="Light"/>
-                        </Border>
-                    </StackPanel>
-                </TabItem.Header>
-                <Grid Width="800">
-                    <!--Design-->
-                    <Border CornerRadius="15" Grid.RowSpan="2">
-                        <Border.Background>
-                            <LinearGradientBrush>
-                                <GradientStop Color="CornflowerBlue" Offset="0.0"/>
-                                <GradientStop Color="Plum" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Border.Background>
-                    </Border>
-                    <!--Buttons-->
-                    <!--Buttons-->
-                    <Grid>
-                        <Button Margin="75 90 0 200" Width="140" Height="110" 
-                                HorizontalAlignment="Left" Background="Transparent" 
-                                Cursor="Hand" BorderThickness="0.0" Foreground="White" 
-                                Content="1st level" FontFamily="Poor Richard" FontSize="25" />
-                        <Button  Margin="300 90 0 0" Width="140" Height="110" 
-                                 HorizontalAlignment="Left" VerticalAlignment="Top"
-                                 Background="Transparent" Foreground="White" 
-                                 Cursor="Hand" BorderThickness="0.0" 
-                                 Content="2nd level" FontFamily="Poor Richard" FontSize="25" />
-                        <Button Margin="0 90 105 200"  Width="140" Height="110" 
-                                HorizontalAlignment="Right" Background="Transparent" 
-                                Cursor="Hand" BorderThickness="0.0" Foreground="White" 
-                                Content="3rd level" FontFamily="Poor Richard" FontSize="25"/>
-                        <Button  Margin="180 250 0 35" Width="140" Height="110" Foreground="White" 
-                                 HorizontalAlignment="Left" Background="Transparent" 
-                                Cursor="Hand" BorderThickness="0.0" 
-                                Content="4th level" FontFamily="Poor Richard" FontSize="25"/>
-                        <Button Margin="420 255 0 35" Width="140" Height="110" 
-                                HorizontalAlignment="Left" Background="Transparent" 
-                                Cursor="Hand" BorderThickness="0.0" Foreground="White" 
-                                Content="5th level" FontFamily="Poor Richard" FontSize="25"/>
-                    </Grid>
-                </Grid>
-            </TabItem>
-            <!--3rd lang Spanish-->
+            <!--3rd language - Spanish-->
             <TabItem Width="170" HorizontalContentAlignment="Center"  Name="Spanish" Foreground="White" FontWeight="Light">
                 <TabItem.Header>
-                    <StackPanel Width="70">
-                        <Border CornerRadius="20" Grid.RowSpan="5">
+                    <StackPanel>
+                        <Border>
                             <Border.Background>
                                 <LinearGradientBrush>
                                     <GradientStop Color="CornflowerBlue" Offset="0.0"/>
                                     <GradientStop Color="Plum" Offset="1"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <TextBlock Text=" Spanish" Width="50" Height="20" />
+                            <TextBlock Text="       Spanish" FontSize="23" FontWeight="Light" HorizontalAlignment="Center" Width="170" Height="40" />
                         </Border>
                     </StackPanel>
                 </TabItem.Header>
                 <Grid Width="800">
                     <!--Design-->
-                    <Border CornerRadius="15" Grid.RowSpan="2">
-                        <Border.Background>
-                            <LinearGradientBrush>
-                                <GradientStop Color="CornflowerBlue" Offset="0.0"/>
-                                <GradientStop Color="Plum" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Border.Background>
+                    <Border Grid.RowSpan="2">
+
                     </Border>
                     <!--Buttons-->
-                    <!--Buttons-->
                     <Grid>
-                        <Button Margin="75 90 0 200" Width="140" Height="110" 
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="57*"/>
+                            <ColumnDefinition Width="43*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="75,90,0,182" Width="140" Height="110" 
                                 HorizontalAlignment="Left" Background="Transparent" 
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
-                                Content="1st level" FontFamily="Poor Richard" FontSize="25" />
+                                Content="1st level" FontWeight="Light" FontSize="23" />
                         <Button  Margin="300 90 0 0" Width="140" Height="110" 
                                  HorizontalAlignment="Left" VerticalAlignment="Top"
                                  Background="Transparent" Foreground="White" 
                                  Cursor="Hand" BorderThickness="0.0" 
-                                 Content="2nd level" FontFamily="Poor Richard" FontSize="25" />
-                        <Button Margin="0 90 105 200"  Width="140" Height="110" 
+                                 Content="2nd level" FontWeight="Light" FontSize="23" />
+                        <Button Margin="0,90,105,182"  Width="140" Height="110" 
                                 HorizontalAlignment="Right" Background="Transparent" 
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
-                                Content="3rd level" FontFamily="Poor Richard" FontSize="25"/>
-                        <Button  Margin="180 250 0 35" Width="140" Height="110" Foreground="White" 
+                                Content="3rd level" FontWeight="Light" FontSize="23" Grid.Column="1"/>
+                        <Button  Margin="180,250,0,22" Width="140" Height="110" Foreground="White" 
                                  HorizontalAlignment="Left" Background="Transparent" 
                                 Cursor="Hand" BorderThickness="0.0" 
-                                Content="4th level" FontFamily="Poor Richard" FontSize="25"/>
-                        <Button Margin="420 255 0 35" Width="140" Height="110" 
+                                Content="4th level" FontWeight="Light" FontSize="23"/>
+                        <Button Margin="420,255,0,17" Width="140" Height="110" 
                                 HorizontalAlignment="Left" Background="Transparent" 
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
-                                Content="5th level" FontFamily="Poor Richard" FontSize="25"/>
+                                Content="5th level" FontWeight="Light" FontSize="23" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Grid>
             </TabItem>
