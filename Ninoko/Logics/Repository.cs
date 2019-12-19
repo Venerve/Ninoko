@@ -40,7 +40,8 @@ namespace Ninoko
                     Answer1 = "do",
                     Answer2 = "like",
                     Answer3 = "spend",
-                    Answer4 = "think about"
+                    Answer4 = "think about",
+                    Correct = 3
                 },
                 new Answer()
                 {
@@ -48,7 +49,8 @@ namespace Ninoko
                     Answer1 = "tree",
                     Answer2 = "flower",
                     Answer3 = "grass",
-                    Answer4 = "Groot"
+                    Answer4 = "Groot",
+                    Correct = 1
                 }
             };
         }
