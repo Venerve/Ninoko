@@ -16,20 +16,35 @@ namespace Ninoko
         public NinokoLogics()
         { LoadData(); }
 
-        public const string UsersFile = "data/users.json";
+        public const string UsersFile = "Data/Users.json";
 
-        public void Registration(string name, string password)
+        public void Registration(string login,string password)
         {
             _idCounter++;
             users.Add(new Models.User
             {
                 Id = _idCounter,
-                Username = name,
+                Username = login,
                 Password = password,
                 CurrentLevel = 1
             }); 
             Serialize(UsersFile, users);
         }
+
+        public int GetLevel(string name)
+        {
+            int _level;
+            foreach (User item in users)
+            {
+                if (item.Username == name)
+                {
+                    _level = item.CurrentLevel;
+                }
+            }
+            return _level;
+            //Что не так????????????
+        }
+
               
         public void LoadData()
         {

@@ -31,8 +31,6 @@ namespace Ninoko
             InitializeComponent();
         }
 
-        public string LoginBox { get; set; }
-
         private void Login(object sender, RoutedEventArgs e)
         {
             if ((string.IsNullOrEmpty(logUsernameBox.Text) | (string.IsNullOrEmpty(logPasswordBox.Password))))
@@ -43,9 +41,8 @@ namespace Ninoko
             if (_logics.users
                 .Any(value => value.Username.Contains(logUsernameBox.Text)))
             {
-                LoginBox = logUsernameBox.Text.ToString();
-                
-                var window = new UsersPersonalWindow(LoginBox);
+                int level = _logics.GetLevel(logUsernameBox.Text);
+                var window = new UsersPersonalWindow(logUsernameBox.Text, level);
                 window.ShowDialog();
             }
         }
