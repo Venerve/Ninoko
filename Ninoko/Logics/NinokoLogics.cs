@@ -20,13 +20,14 @@ namespace Ninoko
 
         public void Registration(string name, string password)
         {
-            
+            _idCounter++;
             users.Add(new Models.User
             {
+                Id = _idCounter,
                 Username = name,
                 Password = password,
                 CurrentLevel = 1
-            });
+            }); 
             Serialize(UsersFile, users);
         }
               
