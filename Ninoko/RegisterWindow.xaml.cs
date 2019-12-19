@@ -22,7 +22,7 @@ namespace Ninoko
     public partial class RegisterWindow : Window
     {
 
-        public readonly NinokoLogics _logics = new NinokoLogics();
+        public readonly NinokoLogics _logics;
         public RegisterWindow()
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace Ninoko
 
         private void LoginClick(object sender, RoutedEventArgs e)
         {
-            var window = new MainWindow();
+            var window = new UsersPersonalWindow();
             window.ShowDialog();
         }
 

@@ -19,7 +19,7 @@ namespace Ninoko
     /// </summary>
     public partial class UsersPersonalWindow : Window
     {
-        public readonly NinokoLogics _logics = new NinokoLogics();
+        public readonly NinokoLogics _logics;
         private int _level;
         public UsersPersonalWindow(string LoginBox, int level)
         {

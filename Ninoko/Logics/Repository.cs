@@ -11,6 +11,7 @@ namespace Ninoko
         public IList<Answer> Answers { get; set; }
         public IList<Question> Questions { get; set; }
         public IReadOnlyCollection<int> Tasks { get; set; }
+        public IList<AnimalsAnswer> AnimalsAnswers {get;set;}
 
         public Repository()
         {
@@ -51,6 +52,27 @@ namespace Ninoko
                     Answer3 = "grass",
                     Answer4 = "Groot",
                     Correct = 1
+                }
+            };
+
+            AnimalsAnswers = new List<AnimalsAnswer>()
+            {
+                new AnimalsAnswer()
+                { 
+                    Name = "En5",
+                    AnimalsName = "Lizard"
+                },
+
+                new AnimalsAnswer()
+                {
+                    Name = "Jp5",
+                    AnimalsName = ""
+                },
+
+                new AnimalsAnswer()
+                {
+                    Name = "Sp5",
+                    AnimalsName = "La cotorra"
                 }
             };
         }

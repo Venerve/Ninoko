@@ -12,11 +12,29 @@ namespace Ninoko
     {
         public List<User> users;
         private static int _idCounter = 1;
+        private readonly Repository _repository;
 
         public NinokoLogics()
         { LoadData(); }
 
         public const string UsersFile = "Data/Users.json";
+
+        public int FindAnswer(string name)
+        {
+            int answer;
+            foreach (var item in _repository.Questions)
+            {
+                foreach (var item2 in _repository.Answers)
+                {
+                    if ((item.Name == item2.Name) & (name == item.Name))
+                    {
+                        answer = item2.Correct;
+                        return answer;
+                    }
+                }
+            }
+            return 0;
+        }
 
         public void Registration(string login,string password)
         {

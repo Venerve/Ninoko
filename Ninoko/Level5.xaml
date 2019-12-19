@@ -34,18 +34,18 @@
             <!--The word-->
             
                 <TextBlock Margin="-27 16 0 0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"
-                           Text="Word" Foreground="White"
+                           Foreground="White"
                            FontWeight="Light" FontSize="23"
-                           Name="TheWordIn5" />
+                           Name="WordIn5" />
                 
             
             <!--The pictures-->
             <StackPanel Grid.Row="2" Grid.Column="1">
                 <StackPanel Orientation="Horizontal">
-                    <RadioButton Margin="60 10 30 0" FontSize="23" GroupName="Animals" Foreground="White" FontWeight="Light"/>
-                    <RadioButton Margin="85 10 30 0" GroupName="Animals" Foreground="White" FontWeight="Light"/>
-                    <RadioButton Margin="85 10 30 0" GroupName="Animals" Foreground="White" FontWeight="Light"/>
-                    <RadioButton Margin="85 10 30 0" GroupName="Animals" Foreground="White" FontWeight="Light"/>
+                    <RadioButton Margin="60 10 30 0" FontSize="23" GroupName="Animals" Foreground="White" FontWeight="Light" Click="KittenClick"/>
+                    <RadioButton Margin="85 10 30 0" GroupName="Animals" Foreground="White" FontWeight="Light" Click="PuppyClick"/>
+                    <RadioButton Margin="85 10 30 0" GroupName="Animals" Foreground="White" FontWeight="Light" Click="LizardClick"/>
+                    <RadioButton Margin="95 10 30 0" GroupName="Animals" Foreground="White" FontWeight="Light" Click="ParrotClick"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                 <Image Margin="0 0 10 0" Source="Photos/kitten.jpg" Width="125" Height="110"/>

@@ -23,11 +23,11 @@ namespace Ninoko
     /// Interaction logic for MainWindow.xaml
     /// </summary>
 
-    public partial class MainWindow : Window
+    public partial class UsersPersonalWindow : Window
     {
    
         public readonly NinokoLogics _logics = new NinokoLogics();
-        public MainWindow()
+        public UsersPersonalWindow()
         {
             InitializeComponent();
 
