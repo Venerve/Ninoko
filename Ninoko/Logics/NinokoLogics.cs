@@ -15,7 +15,9 @@ namespace Ninoko
         private readonly Repository _repository;
 
         public NinokoLogics()
-        { LoadData(); }
+        { 
+            LoadData(); 
+        }
 
         public const string UsersFile = "Data/Users.json";
 

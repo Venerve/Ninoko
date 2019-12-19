@@ -26,12 +26,10 @@ namespace Ninoko
     public partial class UsersPersonalWindow : Window
     {
    
-        public readonly NinokoLogics _logics = new NinokoLogics();
+        public readonly NinokoLogics logics;
         public UsersPersonalWindow()
         {
             InitializeComponent();
-
-
         }
 
         private void Login(object sender, RoutedEventArgs e)
@@ -55,7 +53,7 @@ namespace Ninoko
             var window = new RegisterWindow();
             window.ShowDialog();
         }
-        private void Exit(object sender, RoutedEventArgs e)
+        private void ExitMain(object sender, RoutedEventArgs e)
         {
             Close();
         }
