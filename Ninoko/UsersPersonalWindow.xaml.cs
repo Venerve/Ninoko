@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ninoko.Logics;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -62,26 +63,38 @@ namespace Ninoko
         //English buttons
         private void English1(object sender, RoutedEventArgs e)
         {
-
+            string name = "En1";
+            var window = new Level(name);
+            window.ShowDialog();
         }
 
         private void English2(object sender, RoutedEventArgs e)
         {
-
+            string name = "En2";
+            var window = new Level(name);
+            window.ShowDialog();
         }
 
         private void English3(object sender, RoutedEventArgs e)
         {
-
+            string name = "En3";
+            var window = new Level(name);
+            window.ShowDialog();
         }
 
         private void English4(object sender, RoutedEventArgs e)
         {
+            string name = "En4";
+            var window = new Level(name);
+            window.ShowDialog();
 
         }
 
         private void English5(object sender, RoutedEventArgs e)
         {
+            string name = "En5";
+            var window = new Level(name);
+            window.ShowDialog();
 
         }
 

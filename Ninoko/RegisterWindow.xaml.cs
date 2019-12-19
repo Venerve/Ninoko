@@ -21,6 +21,7 @@ namespace Ninoko
 
     public partial class RegisterWindow : Window
     {
+
         public readonly NinokoLogics _logics = new NinokoLogics();
         public RegisterWindow()
         {

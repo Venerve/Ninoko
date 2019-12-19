@@ -6,5 +6,6 @@ namespace Ninoko.Logics
 {
     class ILevels
     {
+
     }
 }

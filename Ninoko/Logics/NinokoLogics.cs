@@ -33,16 +33,14 @@ namespace Ninoko
 
         public int GetLevel(string name)
         {
-            int _level;
             foreach (User item in users)
             {
                 if (item.Username == name)
                 {
-                    _level = item.CurrentLevel;
+                    return item.CurrentLevel;
                 }
             }
-            return _level;
-            //Что не так????????????
+            return 0;
         }
 
               

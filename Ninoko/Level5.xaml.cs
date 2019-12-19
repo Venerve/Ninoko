@@ -17,9 +17,10 @@ namespace Ninoko
     /// </summary>
     public partial class Level5 : Window
     {
-        public Level5()
+        public Level5(string name)
         {
             InitializeComponent();
+
         }
     }
 }

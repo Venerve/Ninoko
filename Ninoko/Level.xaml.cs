@@ -17,9 +17,11 @@ namespace Ninoko
     /// </summary>
     public partial class Level : Window
     {
-        public Level()
+        private readonly Repository _repository;
+        public Level(string name)
         {
             InitializeComponent();
+
         }
 
         private void FirstAnswer(object sender, RoutedEventArgs e)

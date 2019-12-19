@@ -25,10 +25,13 @@ namespace Ninoko
 
     public partial class MainWindow : Window
     {
+   
         public readonly NinokoLogics _logics = new NinokoLogics();
         public MainWindow()
         {
             InitializeComponent();
+
+
         }
 
         private void Login(object sender, RoutedEventArgs e)
