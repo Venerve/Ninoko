@@ -46,15 +46,17 @@ namespace Ninoko
         private void English1(object sender, RoutedEventArgs e)
         {
             string name = "En1";
-            var window = new Level(_repository, name, _username);
-            window.ShowDialog();
             Close();
+            var window = new Level(_repository, name, _username, _levelEn, _levelJa, _levelEs);
+            window.Show();
+            this.Close();
+
         }
 
         private void English2(object sender, RoutedEventArgs e)
         {
             string name = "En2";
-            var window = new Level(_repository, name, _username);
+            var window = new Level(_repository, name, _username, _levelEn, _levelJa, _levelEs);
             window.ShowDialog();
             Close();
         }
@@ -62,7 +64,7 @@ namespace Ninoko
         private void English3(object sender, RoutedEventArgs e)
         {
             string name = "En3";
-            var window = new Level(_repository, name, _username);
+            var window = new Level(_repository, name, _username, _levelEn, _levelJa, _levelEs);
             window.ShowDialog();
             Close();
         }
@@ -70,7 +72,7 @@ namespace Ninoko
         private void English4(object sender, RoutedEventArgs e)
         {
             string name = "En4";
-            var window = new Level(_repository, name, _username);
+            var window = new Level(_repository, name, _username, _levelEn, _levelJa, _levelEs);
             window.ShowDialog();
             Close();
         }
@@ -78,7 +80,7 @@ namespace Ninoko
         private void English5(object sender, RoutedEventArgs e)
         {
             string name = "En5";
-            var window = new Level(_repository, name, _username);
+            var window = new Level(_repository, name, _username, _levelEn, _levelJa, _levelEs);
             window.ShowDialog();
             Close();
         }
@@ -87,7 +89,7 @@ namespace Ninoko
         private void Japanese1(object sender, RoutedEventArgs e)
         {
             string name = "Ja1";
-            var window = new Level(_repository, name, _username);
+            var window = new Level(_repository, name, _username, _levelEn, _levelJa, _levelEs);
             window.ShowDialog();
             Close();
         }
@@ -95,7 +97,7 @@ namespace Ninoko
         private void Japanese2(object sender, RoutedEventArgs e)
         {
             string name = "Ja2";
-            var window = new Level(_repository, name, _username);
+            var window = new Level(_repository, name, _username, _levelEn, _levelJa, _levelEs);
             window.ShowDialog();
             Close();
         }
@@ -103,7 +105,7 @@ namespace Ninoko
         private void Japanese3(object sender, RoutedEventArgs e)
         {
             string name = "Ja3";
-            var window = new Level(_repository, name, _username);
+            var window = new Level(_repository, name, _username, _levelEn, _levelJa, _levelEs);
             window.ShowDialog();
             Close();
         }
@@ -111,7 +113,7 @@ namespace Ninoko
         private void Japanese4(object sender, RoutedEventArgs e)
         {
             string name = "Ja4";
-            var window = new Level(_repository, name, _username);
+            var window = new Level(_repository, name, _username, _levelEn, _levelJa, _levelEs);
             window.ShowDialog();
             Close();
         }
@@ -119,7 +121,7 @@ namespace Ninoko
         private void Japanese5(object sender, RoutedEventArgs e)
         {
             string name = "Ja5";
-            var window = new Level(_repository, name, _username);
+            var window = new Level(_repository, name, _username, _levelEn, _levelJa, _levelEs);
             window.ShowDialog();
             Close();
         }
@@ -128,7 +130,7 @@ namespace Ninoko
         private void Espanol1(object sender, RoutedEventArgs e)
         {
             string name = "Es1";
-            var window = new Level(_repository, name, _username);
+            var window = new Level(_repository, name, _username, _levelEn, _levelJa, _levelEs);
             window.ShowDialog();
             Close();
         }
@@ -136,7 +138,7 @@ namespace Ninoko
         private void Espanol2(object sender, RoutedEventArgs e)
         {
             string name = "Es2";
-            var window = new Level(_repository, name, _username);
+            var window = new Level(_repository, name, _username, _levelEn, _levelJa, _levelEs);
             window.ShowDialog();
             Close();
         }
@@ -144,7 +146,7 @@ namespace Ninoko
         private void Espanol3(object sender, RoutedEventArgs e)
         {
             string name = "Es3";
-            var window = new Level(_repository, name, _username);
+            var window = new Level(_repository, name, _username, _levelEn, _levelJa, _levelEs);
             window.ShowDialog();
             Close();
         }
@@ -152,7 +154,7 @@ namespace Ninoko
         private void Espanol4(object sender, RoutedEventArgs e)
         {
             string name = "Es4";
-            var window = new Level(_repository, name, _username);
+            var window = new Level(_repository, name, _username, _levelEn, _levelJa, _levelEs);
             window.ShowDialog();
             Close();
         }
@@ -160,7 +162,7 @@ namespace Ninoko
         private void Espanol5(object sender, RoutedEventArgs e)
         {
             string name = "Es5";
-            var window = new Level(_repository, name, _username);
+            var window = new Level(_repository, name, _username, _levelEn, _levelJa, _levelEs);
             window.ShowDialog();
             Close();
         }
