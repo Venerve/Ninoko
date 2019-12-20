@@ -20,7 +20,7 @@ namespace Ninoko
     /// </summary>
     public partial class Level : Window
     {
-        public readonly NinokoLogics _logics;
+        public readonly NinokoLogics _logics = new NinokoLogics();
         private readonly Repository _repository;
         private readonly Question _question;
         private readonly Answer _answers;

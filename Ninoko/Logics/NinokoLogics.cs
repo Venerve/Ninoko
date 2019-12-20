@@ -19,7 +19,7 @@ namespace Ninoko
             LoadData(); 
         }
 
-        public const string UsersFile = "Data/Users.json";
+        public const string UsersFile = "../../../Data/Users.json";
 
         public int FindAnswer(string name)
         {
@@ -79,26 +79,18 @@ namespace Ninoko
 
         public T Deserialize<T>(string fileName)
         {
-            using (var sr = new StreamReader(fileName))
-            {
-                using (var jsonReader = new JsonTextReader(sr))
-                {
-                    var serializer = new JsonSerializer();
-                    return serializer.Deserialize<T>(jsonReader);
-                }
-            }
+            using var sr = new StreamReader(fileName);
+            using var jsonReader = new JsonTextReader(sr);
+            var serializer = new JsonSerializer();
+            return serializer.Deserialize<T>(jsonReader);
         }
 
         public void Serialize<T>(string fileName, T data)
         {
-            using (var sw = new StreamWriter(fileName))
-            {
-                using (var jsonWriter = new JsonTextWriter(sw))
-                {
-                    var serializer = new JsonSerializer();
-                    serializer.Serialize(jsonWriter, data);
-                }
-            }
+            using var sw = new StreamWriter(fileName);
+            using var jsonWriter = new JsonTextWriter(sw);
+            var serializer = new JsonSerializer();
+            serializer.Serialize(jsonWriter, data);
         }
     }
 }
