@@ -32,12 +32,17 @@ namespace Ninoko
                 new Question()
                 {
                     Name = "En3",
-                    QuestionItself = " "
+                    QuestionItself = "What do a child want for birthday? "
                 },
                 new Question()
                 {
                     Name = "En4",
-                    QuestionItself = " "
+                    QuestionItself = "Where do you live?"
+                },
+                new Question()
+                {
+                    Name = "En5",
+                    QuestionItself = "What do you eat at breakfast?"
                 },
                 new Question()
                 {
@@ -67,27 +72,27 @@ namespace Ninoko
                 new Question()
                 {
                     Name = "Es1",
-                    QuestionItself = " "
+                    QuestionItself = "¿Qué días de la semana son los fines de semana?"
                 },
                 new Question()
                 {
                     Name = "Es2",
-                    QuestionItself = " "
+                    QuestionItself = "¿Donde puedes nadar?"
                 },
                 new Question()
                 {
                     Name = "Es3",
-                    QuestionItself = " "
+                    QuestionItself = "¿Como comer sopa? "
                 },
                 new Question()
                 {
                     Name = "Es4",
-                    QuestionItself = " "
+                    QuestionItself = "¿How do you name a dog in Spanish?"
                 },
                 new Question()
                 {
                     Name = "Es5",
-                    QuestionItself = " "
+                    QuestionItself = "¿How to say 'What is your name?' in Spanish? "
                 }
             };
             
@@ -115,20 +120,29 @@ namespace Ninoko
                 new Answer()
                 {
                     Name = "En3",
-                    Answer1 = " ",
-                    Answer2 = " ",
-                    Answer3 = " ",
-                    Answer4 = " ",
+                    Answer1 = "a present ",
+                    Answer2 = "a branch ",
+                    Answer3 = "a paper ",
+                    Answer4 = "dust ",
                     Correct = 1
                 },
                 new Answer()
                 {
                     Name = "En4",
-                    Answer1 = " ",
-                    Answer2 = " ",
-                    Answer3 = " ",
-                    Answer4 = " ",
-                    Correct = 1
+                    Answer1 = "In the plains",
+                    Answer2 = "At sea",
+                    Answer3 = "In the forest",
+                    Answer4 = "At home ",
+                    Correct = 4
+                },
+                new Answer()
+                {
+                    Name = "En5",
+                    Answer1 = "meat ",
+                    Answer2 = "brocolli ",
+                    Answer3 = "cereal ",
+                    Answer4 = "olives ",
+                    Correct = 3
                 },
                 new Answer()
                 {
@@ -178,38 +192,47 @@ namespace Ninoko
                 new Answer()
                 {
                     Name = "Es1",
-                    Answer1 = " ",
-                    Answer2 = " ",
-                    Answer3 = " ",
-                    Answer4 = " ",
-                    Correct = 1
+                    Answer1 = "Sabado, Domingo",
+                    Answer2 = "Sabado, Martes",
+                    Answer3 = "Domingo, Viernes ",
+                    Answer4 = "Martes, Viernes",
+                    Correct = 2
                 },
                 new Answer()
                 {
                     Name = "Es2",
-                    Answer1 = " ",
-                    Answer2 = " ",
-                    Answer3 = " ",
-                    Answer4 = " ",
+                    Answer1 = "En el mar",
+                    Answer2 = "En la llanura",
+                    Answer3 = "En las montañas",
+                    Answer4 = "En el bosque",
                     Correct = 1
                 },
                 new Answer()
                 {
                     Name = "Es3",
-                    Answer1 = " ",
-                    Answer2 = " ",
-                    Answer3 = " ",
-                    Answer4 = " ",
-                    Correct = 1
+                    Answer1 = "Con un tenedor",
+                    Answer2 = "Con un cuchillo ",
+                    Answer3 = "Con una cuchara",
+                    Answer4 = "Con una mano",
+                    Correct = 3
                 },
                 new Answer()
                 {
                     Name = "Es4",
-                    Answer1 = " ",
-                    Answer2 = " ",
-                    Answer3 = " ",
-                    Answer4 = " ",
-                    Correct = 1
+                    Answer1 = "El gato",
+                    Answer2 = "El perro",
+                    Answer3 = "El loro",
+                    Answer4 = "El pájaro ",
+                    Correct = 2
+                },
+                new Answer()
+                {
+                    Name = "Es5",
+                    Answer1 = "¿Vamos al cine?",
+                    Answer2 = "¿Quieres a bailar por la noche?",
+                    Answer3 = "¿Cual es tu nombre?",
+                    Answer4 = "¿Cual es tu numero?",
+                    Correct = 3
                 }
             };
 

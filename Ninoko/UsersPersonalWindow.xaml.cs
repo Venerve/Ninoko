@@ -20,87 +20,17 @@ namespace Ninoko
     public partial class UsersPersonalWindow : Window
     {
         public readonly NinokoLogics _logics;
-        private readonly int _levelEn, _levelJa, _levelEs;
         private readonly Repository _repository = new Repository();
         private readonly string _username;
 
         public UsersPersonalWindow(string username, int levelEn, int levelJa, int levelEs)
         {
             InitializeComponent();
-            _levelEn = levelEn;
             _username = username;
 
-            switch (_levelEn)
-            {
-                case 1:
-                    En2.IsEnabled = false;
-                    En3.IsEnabled = false;
-                    En4.IsEnabled = false;
-                    En5.IsEnabled = false;
-                    break;
-                case 2:
-                    En3.IsEnabled = false;
-                    En4.IsEnabled = false;
-                    En5.IsEnabled = false;
-                    break;
-                case 3:
-                    En4.IsEnabled = false;
-                    En5.IsEnabled = false;
-                    break;
-                case 4:
-                    En5.IsEnabled = false;
-                    break;
-                case 5:
-                    break;
-            }
-            _levelJa = levelJa;
-            switch (_levelJa)
-            {
-                case 1:
-                    Ja2.IsEnabled = false;
-                    Ja3.IsEnabled = false;
-                    Ja4.IsEnabled = false;
-                    Ja5.IsEnabled = false;
-                    break;
-                case 2:
-                    Ja3.IsEnabled = false;
-                    Ja4.IsEnabled = false;
-                    Ja5.IsEnabled = false;
-                    break;
-                case 3:
-                    Ja4.IsEnabled = false;
-                    Ja5.IsEnabled = false;
-                    break;
-                case 4:
-                    Ja5.IsEnabled = false;
-                    break;
-                case 5:
-                    break;
-            }
-            _levelEs = levelEs;
-            switch (_levelEs)
-            {
-                case 1:
-                    Es2.IsEnabled = false;
-                    Es3.IsEnabled = false;
-                    Es4.IsEnabled = false;
-                    Es5.IsEnabled = false;
-                    break;
-                case 2:
-                    Es3.IsEnabled = false;
-                    Es4.IsEnabled = false;
-                    Es5.IsEnabled = false;
-                    break;
-                case 3:
-                    Es4.IsEnabled = false;
-                    Es5.IsEnabled = false;
-                    break;
-                case 4:
-                    Es5.IsEnabled = false;
-                    break;
-                case 5:
-                    break;
-            }
+            _logics.AvailableButtons(levelEn, En2, En3, En4, En5);
+            _logics.AvailableButtons(levelJa, Ja2, Ja3, Ja4, Ja5);
+            _logics.AvailableButtons(levelEs, Es2, Es3, Es4, Es5);
         }
 
         private void Exit(object sender, RoutedEventArgs e)

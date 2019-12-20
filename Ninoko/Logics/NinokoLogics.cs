@@ -1,10 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Ninoko.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using Newtonsoft.Json;
-using Ninoko.Models;
+using System.Windows.Controls;
 
 
 namespace Ninoko
@@ -22,7 +21,34 @@ namespace Ninoko
         public const string UsersFile = "../../../Data/Users.json";
 
         
-
+        public void AvailableButtons(int level, Button button2, Button button3, Button button4, Button button5)
+        {
+            switch (level)
+            {
+                case 1:
+                    button2.IsEnabled = false;
+                    button3.IsEnabled = false;
+                    button4.IsEnabled = false;
+                    button5.IsEnabled = false;
+                    break;
+                case 2:
+                    button3.IsEnabled = false;
+                    button4.IsEnabled = false;
+                    button5.IsEnabled = false;
+                    break;
+                case 3:
+                    button4.IsEnabled = false;
+                    button5.IsEnabled = false;
+                    break;
+                case 4:
+                    button5.IsEnabled = false;
+                    break;
+                case 5:
+                    break;
+            }
+            
+           
+        }
         public void Registration(string login,string password)
         {
             _idCounter++;

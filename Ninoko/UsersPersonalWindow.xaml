@@ -170,7 +170,7 @@
                 </Grid>
             </TabItem>
             <!--3rd language - Spanish-->
-            <TabItem Width="170" HorizontalContentAlignment="Center"  Name="Spanish" Foreground="White" FontWeight="Light">
+            <TabItem Width="170" HorizontalContentAlignment="Center"  Name="Espanol" Foreground="White" FontWeight="Light">
                 <TabItem.Header>
                     <StackPanel>
                         <Border>
@@ -180,7 +180,7 @@
                                     <GradientStop Color="Plum" Offset="1"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <TextBlock Text="       Spanish" FontSize="23" FontWeight="Light" HorizontalAlignment="Center" Width="170" Height="40" />
+                            <TextBlock Text="       Español" FontSize="23" FontWeight="Light" HorizontalAlignment="Center" Width="170" Height="40" />
                         </Border>
                     </StackPanel>
                     
@@ -201,32 +201,32 @@
                                 Name="Es1" Click="Espanol1" IsEnabled="True"
                                 HorizontalAlignment="Left" 
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
-                                Content="1st level" FontWeight="Light" FontSize="23"
+                                Content="Primer nivel"  FontWeight="Light" FontSize="23"
                                 Style="{StaticResource MyButton}"/>
                         <Button  Margin="300 90 0 0" Width="140" Height="110" 
                                  Name="Es2" Click="Espanol2" IsEnabled="True"
                                  HorizontalAlignment="Left" VerticalAlignment="Top"
                                  Foreground="White" 
                                  Cursor="Hand" BorderThickness="0.0" 
-                                 Content="2nd level" FontWeight="Light" FontSize="23"
+                                 Content="Segundo nivel" FontWeight="Light" FontSize="23"
                                  Style="{StaticResource MyButton}"/>
                         <Button Margin="0,90,105,182"  Width="140" Height="110" 
                                 Name="Es3" Click="Espanol3" IsEnabled="True"
                                 HorizontalAlignment="Right" 
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
-                                Content="3rd level" FontWeight="Light" FontSize="23" Grid.Column="1"
+                                Content="Tercer nivel" FontWeight="Light" FontSize="23" Grid.Column="1"
                                 Style="{StaticResource MyButton}"/>
                         <Button  Margin="180,250,0,22" Width="140" Height="110" Foreground="White" 
                                  Name="Es4" Click="Espanol4" IsEnabled="True"
                                  HorizontalAlignment="Left" 
                                 Cursor="Hand" BorderThickness="0.0" 
-                                Content="4th level" FontWeight="Light" FontSize="23"
+                                Content="Cuarto nivel" FontWeight="Light" FontSize="23"
                                  Style="{StaticResource MyButton}"/>
                         <Button Margin="420,255,0,17" Width="140" Height="110" 
                                 Name="Es5" Click="Espanol5" IsEnabled="True"
                                 HorizontalAlignment="Left" 
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
-                                Content="5th level" FontWeight="Light" FontSize="23" Grid.ColumnSpan="2"
+                                Content="Quinto nivel" FontWeight="Light" FontSize="23" Grid.ColumnSpan="2"
                                 Style="{StaticResource MyButton}"/>
                     </Grid>
                 </Grid>
