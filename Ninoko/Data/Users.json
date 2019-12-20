@@ -3,6 +3,8 @@
     "Id": "1",
     "Username": "superoberto",
     "Password": "robert123",
-    "CurrentLevel": "3"
+    "CurrentLevelEn": "3",
+	"CurrentLevelJa": "1",
+	"CurrentLevelEs": "5"
   }
 ]

@@ -13,8 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Security.Cryptography;
-//using Ninoko.Logics;
-//using Newtonsoft.Json;
+
 
 
 namespace Ninoko
@@ -23,11 +22,10 @@ namespace Ninoko
     /// Interaction logic for MainWindow.xaml
     /// </summary>
 
-    public partial class UsersPersonalWindow : Window
+    public partial class MainWindow : Window
     {
-   
-        public readonly NinokoLogics logics;
-        public UsersPersonalWindow()
+        public readonly NinokoLogics _logics = new NinokoLogics();
+        public MainWindow()
         {
             InitializeComponent();
         }
@@ -39,12 +37,21 @@ namespace Ninoko
                 MessageBox.Show("Every field should be filled!", "Filling error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            if (_logics.users
-                .Any(value => value.Username.Contains(logUsernameBox.Text)))
+            if ((_logics.users
+                .Any(value => value.Username.Equals(logUsernameBox.Text))) && 
+                (_logics.users
+                .Any(value => value.Password.Equals(logPasswordBox.Password))))
             {
-                int level = _logics.GetLevel(logUsernameBox.Text);
-                var window = new UsersPersonalWindow(logUsernameBox.Text, level);
+                var levelEn = _logics.GetLevel(logUsernameBox.Text).Item1;
+                var levelJa = _logics.GetLevel(logUsernameBox.Text).Item2;
+                var levelEs = _logics.GetLevel(logUsernameBox.Text).Item3;
+                var window = new UsersPersonalWindow(logUsernameBox.Text, levelEn, levelJa, levelEs);
                 window.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Uncorrect username or/and password", "User not found", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
         }
 
@@ -53,7 +60,7 @@ namespace Ninoko
             var window = new RegisterWindow();
             window.ShowDialog();
         }
-        private void ExitMain(object sender, RoutedEventArgs e)
+        private void Exit(object sender, RoutedEventArgs e)
         {
             Close();
         }

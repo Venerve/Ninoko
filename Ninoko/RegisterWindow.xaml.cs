@@ -22,7 +22,7 @@ namespace Ninoko
     public partial class RegisterWindow : Window
     {
 
-        public readonly NinokoLogics _logics;
+        public readonly NinokoLogics _logics = new NinokoLogics();
         public RegisterWindow()
         {
             InitializeComponent();
@@ -33,24 +33,16 @@ namespace Ninoko
             Close();
         }
 
-        private void LoginClick(object sender, RoutedEventArgs e)
-        {
-            var window = new UsersPersonalWindow();
-            window.ShowDialog();
-        }
-
         private void RegisterClick(object sender, RoutedEventArgs e)
         {
-
-            if (passwordBox != repPasswordBox)
-            {
-                MessageBox.Show("Passwords don't match!", "Passwords", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-
-            else if ((string.IsNullOrEmpty(usernameBox.Text) | (string.IsNullOrEmpty(passwordBox.Password) | (string.IsNullOrEmpty(repPasswordBox.Password)))))
+            if ((string.IsNullOrEmpty(usernameBox.Text) | (string.IsNullOrEmpty(passwordBox.Password)) | (string.IsNullOrEmpty(repPasswordBox.Password))))
             {
                 MessageBox.Show("Every field should be filled!", "Filling error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (passwordBox.Password != repPasswordBox.Password)
+            {
+                MessageBox.Show("Passwords don't match!", "Passwords", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 

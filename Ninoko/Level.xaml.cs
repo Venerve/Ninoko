@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -24,6 +25,7 @@ namespace Ninoko
         private readonly Question _question;
         private readonly Answer _answers;
         private readonly int correctAnswer;
+        Brush defaultBackground;
         public Level(string name)
         {
             if ((_repository.Questions.
@@ -38,71 +40,100 @@ namespace Ninoko
                 fourthAnswer.Text = _answers.Answer4;
             }
             correctAnswer =_logics.FindAnswer(name);
-
             
         }
 
         private void FirstAnswer(object sender, RoutedEventArgs e)
         {
+            Button button = sender as Button;
             if (correctAnswer == 1) 
             {
                 // Должно что-то что-то в окошке меняться, что-то появляться или цвет меняется НА ЗЕЛЕНЫЙ. Потом 3 секунды ожидание и должна быть следующая команда
-                UsersPersonalWindow window = new UsersPersonalWindow();
-                window.ShowDialog();
+
+                button.Effect = new System.Windows.Media.Effects.DropShadowEffect()
+                {
+                    BlurRadius = 10,
+                    ShadowDepth = 5,
+                };
+                defaultBackground = button.Background;
+                button.Background = Brushes.Green;
+                Thread.Sleep(2000);
+                button.Background = defaultBackground;
+                Close();
             }
             else
             {
                 // Должно что-то что-то в окошке меняться, что-то появляться или цвет меняется НА КРАСНЫЙ. Потом 3 секунды ожидание и должна быть следующая команда
-                UsersPersonalWindow window = new UsersPersonalWindow();
-                window.ShowDialog();
+                
+                button.Effect = new System.Windows.Media.Effects.DropShadowEffect()
+                {
+                    BlurRadius = 10,
+                    ShadowDepth = 5
+                };
+                defaultBackground = button.Background;
+                button.Background = Brushes.Red;
+                Thread.Sleep(2000);
+                button.Background = defaultBackground;
             }
         }
 
         private void SecondAnswer(object sender, RoutedEventArgs e)
         {
+            Button button = sender as Button;
             if (correctAnswer == 2)
             {
-                
-                UsersPersonalWindow window = new UsersPersonalWindow();
-                window.ShowDialog();
+                defaultBackground = button.Background;
+                button.Background = Brushes.Green;
+                Thread.Sleep(2000);
+                button.Background = defaultBackground;
+                Close();
             }
             else
             {
-                
-                UsersPersonalWindow window = new UsersPersonalWindow();
-                window.ShowDialog();
+                defaultBackground = button.Background;
+                button.Background = Brushes.Green;
+                Thread.Sleep(2000);
+                button.Background = defaultBackground;
             }
         }
 
         private void ThirdAnswer(object sender, RoutedEventArgs e)
         {
+            Button button = sender as Button;
             if (correctAnswer == 3)
             {
-
-                UsersPersonalWindow window = new UsersPersonalWindow();
-                window.ShowDialog();
+                defaultBackground = button.Background;
+                button.Background = Brushes.Green;
+                Thread.Sleep(2000);
+                button.Background = defaultBackground;
+                Close();
             }
             else
             {
-
-                UsersPersonalWindow window = new UsersPersonalWindow();
-                window.ShowDialog();
+                defaultBackground = button.Background;
+                button.Background = Brushes.Green;
+                Thread.Sleep(2000);
+                button.Background = defaultBackground;
             }
         }
 
         private void FourthAnswer(object sender, RoutedEventArgs e)
         {
+            Button button = sender as Button;
             if (correctAnswer == 4)
             {
-
-                UsersPersonalWindow window = new UsersPersonalWindow();
-                window.ShowDialog();
+                defaultBackground = button.Background;
+                button.Background = Brushes.Green;
+                Thread.Sleep(2000);
+                button.Background = defaultBackground;
+                Close();
             }
             else
             {
-
-                UsersPersonalWindow window = new UsersPersonalWindow();
-                window.ShowDialog();
+                defaultBackground = button.Background;
+                button.Background = Brushes.Green;
+                Thread.Sleep(2000);
+                button.Background = defaultBackground;
             }
         }
     }

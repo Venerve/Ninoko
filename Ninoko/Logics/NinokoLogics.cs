@@ -46,21 +46,23 @@ namespace Ninoko
                 Id = _idCounter,
                 Username = login,
                 Password = password,
-                CurrentLevel = 1
+                CurrentLevelEn = 1,
+                CurrentLevelJa = 1,
+                CurrentLevelEs = 1
             }); 
             Serialize(UsersFile, users);
         }
 
-        public int GetLevel(string name)
+        public (int, int, int) GetLevel(string name)
         {
             foreach (User item in users)
             {
                 if (item.Username == name)
                 {
-                    return item.CurrentLevel;
+                    return (item.CurrentLevelEn, item.CurrentLevelJa, item.CurrentLevelEs);
                 }
             }
-            return 0;
+            return (0, 0, 0);
         }
 
               

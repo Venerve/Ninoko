@@ -103,7 +103,7 @@
                 BorderThickness="0"
                 Opacity="0.2"/>
             <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
-                <Button Click="LoginClick" Width="100" FontSize="21" FontWeight="Light" Height="35" Content="Login" Margin="0,0,50,0" Background="Transparent" Foreground="White" BorderThickness="0"/>
+                <Button Click="Exit" Width="100" FontSize="21" FontWeight="Light" Height="35" Content="Back" Margin="0,0,50,0" Background="Transparent" Foreground="White" BorderThickness="0"/>
                 <Button Click="RegisterClick" Width="100" FontSize="21" FontWeight="Light" Height="35" Content="Register" Background="Transparent" Foreground="White" BorderThickness="0"/>
             </StackPanel>
         </StackPanel>
