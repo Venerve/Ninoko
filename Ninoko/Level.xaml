@@ -8,6 +8,7 @@
         Title="Level" Height="450" Width="800"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    
     <Grid>
         <Border CornerRadius="15" Grid.RowSpan="2">
             <Border.Background>
@@ -29,52 +30,52 @@
                 <RowDefinition Height="210"/>
             </Grid.RowDefinitions>
             <!--description-->
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Column="3">
+                <Button 
+                    Content="X"  
+                    Click="Exit"
+                    FontWeight="Light" 
+                    FontSize="23" 
+                    Margin="10"
+                    Background="Transparent"
+                    HorizontalAlignment="Center"
+                    Foreground="White"
+                    BorderThickness="0"/>
+            </StackPanel>
             <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center"
                        Text="Choose the right answer" VerticalAlignment="Bottom" 
                        FontSize="25" FontWeight="Light"
                        Foreground="White"/>
             <!--Question-->
             <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"
-                       VerticalAlignment="Bottom" Name="question"
-                       FontSize="20" FontFamily="Poor Richard"
+                       VerticalAlignment="Bottom" Name="questionBox"
+                       FontSize="20" 
                        Foreground="White" FontWeight="Light" Margin="0 0 0 10"/>
             <!--Answers-->
             <StackPanel Grid.Row="2" Grid.Column="1">
-                <StackPanel  Margin="0 20 0 0" Orientation="Horizontal">
-                    <Button  Content="1: " BorderThickness="0.0" 
-                                 FontWeight="Light" FontSize="23" 
-                                 Background="Transparent" Foreground="White"
+                <StackPanel  Margin="0 20 0 0" Orientation="Horizontal" >
+                    <Button   Name="firstAnswerBox" BorderThickness="0.0" 
+                                 FontWeight="Light" FontSize="23" Foreground="White"
+                                 Background="Transparent"  HorizontalAlignment="Center"
                                  Cursor="Hand" Click="FirstAnswer"/>
-                    <TextBlock Name="firstAnswer" Foreground="White"
-                                 FontWeight="Light" FontSize="23" 
-                                 Background="Transparent"/>
                 </StackPanel>
                 <StackPanel  Margin="0 20 0 0" Orientation="Horizontal">
-                    <Button  Content="2: " BorderThickness="0.0" 
-                                 FontWeight="Light" FontSize="23" 
+                    <Button  Name="secondAnswerBox"  BorderThickness="0.0" 
+                                 FontWeight="Light" FontSize="23"  HorizontalAlignment="Center"
                                  Background="Transparent" Foreground="White"
                                  Cursor="Hand" Click="SecondAnswer" />
-                    <TextBlock Name="secondAnswer" Foreground="White"
-                                 FontWeight="Light" FontSize="23" 
-                                 Background="Transparent"/>
                 </StackPanel>
                 <StackPanel  Margin="0 20 0 0" Orientation="Horizontal">
-                    <Button  Content="3: " BorderThickness="0.0" 
-                                 FontWeight="Light" FontSize="23" 
+                    <Button  Name="thirdAnswerBox"  BorderThickness="0.0" 
+                                 FontWeight="Light" FontSize="23" HorizontalAlignment="Center"
                                  Background="Transparent" Foreground="White"
                                  Cursor="Hand" Click="ThirdAnswer" />
-                    <TextBlock Name="thirdAnswer" Foreground="White"
-                                 FontWeight="Light" FontSize="23" 
-                                 Background="Transparent"/>
                 </StackPanel>
                 <StackPanel  Margin="0 20 0 0" Orientation="Horizontal">
-                    <Button  Content="4: " BorderThickness="0.0" 
-                                 FontWeight="Light" FontSize="23" 
+                    <Button  Name="fourthAnswerBox"  BorderThickness="0.0" 
+                                 FontWeight="Light" FontSize="23" HorizontalAlignment="Center"
                                  Background="Transparent" Foreground="White"
                                  Cursor="Hand" Click="FourthAnswer" />
-                    <TextBlock Name="fourthAnswer" Foreground="White"
-                                 FontWeight="Light" FontSize="23" 
-                                 Background="Transparent"/>
                 </StackPanel>
             </StackPanel>
 

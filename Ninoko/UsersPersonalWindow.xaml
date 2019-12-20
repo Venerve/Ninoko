@@ -84,17 +84,17 @@
                                 Style="{StaticResource MyButton}"/>
                         <Button  Margin="49,90,0,0" Width="140" Height="110" Name="En2"
                                  HorizontalAlignment="Left" VerticalAlignment="Top"
-                                 Background="Transparent" Foreground="White" 
+                                 Foreground="White" 
                                  Cursor="Hand" BorderThickness="0.0" IsEnabled="True"
                                  Content="2nd level" FontWeight="Light" FontSize="23" Grid.Column="2" Click="English2" 
                                  Style="{StaticResource MyButton}"/>
                         <Button Margin="0,90,105,182"  Width="140" Height="110" Name="En3"
-                                HorizontalAlignment="Right" Background="Transparent" IsEnabled="True"
+                                HorizontalAlignment="Right" IsEnabled="True"
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
                                 Content="3rd level" FontWeight="Light" FontSize="23" Grid.Column="2" Click="English3"
                                 Style="{StaticResource MyButton}"/>
                         <Button  Margin="175,250,0,22" Width="140" Height="110" Foreground="White" 
-                                 HorizontalAlignment="Left" Background="Transparent" 
+                                 HorizontalAlignment="Left" 
                                 Cursor="Hand" BorderThickness="0.0" Name="En4" IsEnabled="True"
                                 Content="4th level" FontWeight="Light" FontSize="23" Grid.ColumnSpan="2" Grid.Column="1" Click="English4"
                                  Style="{StaticResource MyButton}"/>
@@ -117,7 +117,7 @@
                                     <GradientStop Color="Plum" Offset="1"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <TextBlock Text="       Japanese" FontSize="23" HorizontalAlignment="Center" Width="170" Height="40" Foreground="White" FontWeight="Light" RenderTransformOrigin="-0.016,0.501"/>
+                            <TextBlock Text="       日本語" FontSize="23" HorizontalAlignment="Center" Width="170" Height="40" Foreground="White" FontWeight="Light" RenderTransformOrigin="-0.016,0.501"/>
                         </Border>
                     </StackPanel>
                 </TabItem.Header>
@@ -139,32 +139,32 @@
                             <ColumnDefinition Width="549*"/>
                         </Grid.ColumnDefinitions>
                         <Button Margin="70,90,0,182" Width="140" Height="110" Name="Ja1" Click="Japanese1"
-                                HorizontalAlignment="Left" Background="Transparent" 
+                                HorizontalAlignment="Left" IsEnabled="True"
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
-                                Content="1st level" FontWeight="Light" FontSize="23" Grid.Column="1"
+                                Content="一レベル" FontWeight="Light" FontSize="23" Grid.Column="1"
                                 Style="{StaticResource MyButton}"/>
                         <Button  Margin="49,90,0,0" Width="140" Height="110" Name="Ja2" Click="Japanese2"
-                                 HorizontalAlignment="Left" VerticalAlignment="Top"
-                                 Background="Transparent" Foreground="White" 
+                                 HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="True"
+                                 Foreground="White" 
                                  Cursor="Hand" BorderThickness="0.0" 
-                                 Content="2nd level" FontWeight="Light" FontSize="23" Grid.Column="2" 
+                                 Content="二レベル" FontWeight="Light" FontSize="23" Grid.Column="2" 
                                  Style="{StaticResource MyButton}"/>
                         <Button Margin="0,90,105,182"  Width="140" Height="110" Name="Ja3" Click="Japanese3"
-                                HorizontalAlignment="Right" Background="Transparent" 
+                                HorizontalAlignment="Right" IsEnabled="True"
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
-                                Content="3rd level" FontWeight="Light" FontSize="23" Grid.Column="2"
+                                Content="三レベル" FontWeight="Light" FontSize="23" Grid.Column="2"
                                 Style="{StaticResource MyButton}"/>
                         <Button  Margin="175,250,0,22" Width="140" Height="110" 
-                                 Foreground="White" Name="Ja4" Click="Japanese4"
-                                 HorizontalAlignment="Left" Background="Transparent" 
+                                 Foreground="White" Name="Ja4" Click="Japanese4" IsEnabled="True"
+                                 HorizontalAlignment="Left"
                                 Cursor="Hand" BorderThickness="0.0" 
-                                Content="4th level" FontWeight="Light" FontSize="23" Grid.ColumnSpan="2" Grid.Column="1"
+                                Content="四レベル" FontWeight="Light" FontSize="23" Grid.ColumnSpan="2" Grid.Column="1"
                                  Style="{StaticResource MyButton}"/>
                         <Button Margin="169,255,0,17" Width="140" Height="110" 
-                                Name="Ja5" Click="Japanese5"
-                                HorizontalAlignment="Left" Background="Transparent" 
+                                Name="Ja5" Click="Japanese5" IsEnabled="True"
+                                HorizontalAlignment="Left" 
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
-                                Content="5th level" FontWeight="Light" FontSize="23" Grid.Column="2"
+                                Content="五レベル" FontWeight="Light" FontSize="23" Grid.Column="2"
                                 Style="{StaticResource MyButton}"/>
                     </Grid>
                 </Grid>
@@ -198,33 +198,33 @@
                             <ColumnDefinition Width="43*"/>
                         </Grid.ColumnDefinitions>
                         <Button Margin="75,90,0,182" Width="140" Height="110" 
-                                Name="Es1" Click="Espanol1"
-                                HorizontalAlignment="Left" Background="Transparent" 
+                                Name="Es1" Click="Espanol1" IsEnabled="True"
+                                HorizontalAlignment="Left" 
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
                                 Content="1st level" FontWeight="Light" FontSize="23"
                                 Style="{StaticResource MyButton}"/>
                         <Button  Margin="300 90 0 0" Width="140" Height="110" 
-                                 Name="Es2" Click="Espanol2"
+                                 Name="Es2" Click="Espanol2" IsEnabled="True"
                                  HorizontalAlignment="Left" VerticalAlignment="Top"
-                                 Background="Transparent" Foreground="White" 
+                                 Foreground="White" 
                                  Cursor="Hand" BorderThickness="0.0" 
                                  Content="2nd level" FontWeight="Light" FontSize="23"
                                  Style="{StaticResource MyButton}"/>
                         <Button Margin="0,90,105,182"  Width="140" Height="110" 
-                                Name="Es3" Click="Espanol3"
-                                HorizontalAlignment="Right" Background="Transparent" 
+                                Name="Es3" Click="Espanol3" IsEnabled="True"
+                                HorizontalAlignment="Right" 
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
                                 Content="3rd level" FontWeight="Light" FontSize="23" Grid.Column="1"
                                 Style="{StaticResource MyButton}"/>
                         <Button  Margin="180,250,0,22" Width="140" Height="110" Foreground="White" 
-                                 Name="Es4" Click="Espanol4"
-                                 HorizontalAlignment="Left" Background="Transparent" 
+                                 Name="Es4" Click="Espanol4" IsEnabled="True"
+                                 HorizontalAlignment="Left" 
                                 Cursor="Hand" BorderThickness="0.0" 
                                 Content="4th level" FontWeight="Light" FontSize="23"
                                  Style="{StaticResource MyButton}"/>
                         <Button Margin="420,255,0,17" Width="140" Height="110" 
-                                Name="Es5" Click="Espanol5"
-                                HorizontalAlignment="Left" Background="Transparent" 
+                                Name="Es5" Click="Espanol5" IsEnabled="True"
+                                HorizontalAlignment="Left" 
                                 Cursor="Hand" BorderThickness="0.0" Foreground="White" 
                                 Content="5th level" FontWeight="Light" FontSize="23" Grid.ColumnSpan="2"
                                 Style="{StaticResource MyButton}"/>

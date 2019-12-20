@@ -22,119 +22,125 @@ namespace Ninoko
     {
         public readonly NinokoLogics _logics = new NinokoLogics();
         private readonly Repository _repository;
-        private readonly Question _question;
-        private readonly Answer _answers;
         private readonly int correctAnswer;
-        Brush defaultBackground;
-        public Level(string name)
+        private readonly string _username;
+        private readonly int EnLev, JaLev, EsLev;
+        private readonly string qname;
+        public List<User> users;
+        public Level(Repository repository, string name, string username)
         {
-            if ((_repository.Questions.
-                Any(value => value.Name.Contains(name))) &
-               (_repository.Answers.
-                Any(value => value.Name.Contains(name))))
+            InitializeComponent();
+            _repository = repository;
+            _username = username;
+            EnLev = _logics.GetLevel(username).Item1;
+            JaLev = _logics.GetLevel(username).Item2;
+            EsLev = _logics.GetLevel(username).Item3;
+
+            foreach (Question _question in _repository.Questions)
             {
-                question.Text = _question.QuestionItself;
-                firstAnswer.Text = _answers.Answer1;
-                secondAnswer.Text = _answers.Answer2;
-                thirdAnswer.Text = _answers.Answer3;
-                fourthAnswer.Text = _answers.Answer4;
+                foreach (Answer _answers in _repository.Answers)
+                {
+                    if ((_question.Name.Equals(name)) &
+                            (_answers.Name.Equals(name)))
+                    {
+                        questionBox.Text = _question.QuestionItself;
+                        firstAnswerBox.Content = _answers.Answer1;
+                        secondAnswerBox.Content = _answers.Answer2;
+                        thirdAnswerBox.Content = _answers.Answer3;
+                        fourthAnswerBox.Content = _answers.Answer4;
+                        qname = _question.Name;
+                    }
+                    correctAnswer = FindAnswer(name);
+                }
             }
-            correctAnswer =_logics.FindAnswer(name);
-            
         }
 
         private void FirstAnswer(object sender, RoutedEventArgs e)
         {
-            Button button = sender as Button;
             if (correctAnswer == 1) 
             {
-                // Должно что-то что-то в окошке меняться, что-то появляться или цвет меняется НА ЗЕЛЕНЫЙ. Потом 3 секунды ожидание и должна быть следующая команда
-
-                button.Effect = new System.Windows.Media.Effects.DropShadowEffect()
-                {
-                    BlurRadius = 10,
-                    ShadowDepth = 5,
-                };
-                defaultBackground = button.Background;
-                button.Background = Brushes.Green;
-                Thread.Sleep(2000);
-                button.Background = defaultBackground;
+                MessageBox.Show("Correct!", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
+                _logics.LevelUp(_username, qname);
+                var window = new UsersPersonalWindow(_username, EnLev, JaLev, EsLev);
+                window.ShowDialog();
                 Close();
             }
             else
             {
-                // Должно что-то что-то в окошке меняться, что-то появляться или цвет меняется НА КРАСНЫЙ. Потом 3 секунды ожидание и должна быть следующая команда
-                
-                button.Effect = new System.Windows.Media.Effects.DropShadowEffect()
-                {
-                    BlurRadius = 10,
-                    ShadowDepth = 5
-                };
-                defaultBackground = button.Background;
-                button.Background = Brushes.Red;
-                Thread.Sleep(2000);
-                button.Background = defaultBackground;
+                MessageBox.Show("Uncorrect! Try again", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
         private void SecondAnswer(object sender, RoutedEventArgs e)
         {
-            Button button = sender as Button;
             if (correctAnswer == 2)
             {
-                defaultBackground = button.Background;
-                button.Background = Brushes.Green;
-                Thread.Sleep(2000);
-                button.Background = defaultBackground;
+                MessageBox.Show("Correct!", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
+                _logics.LevelUp(_username, qname);
+                var window = new UsersPersonalWindow(_username, EnLev, JaLev, EsLev);
+                window.ShowDialog();
                 Close();
             }
             else
             {
-                defaultBackground = button.Background;
-                button.Background = Brushes.Green;
-                Thread.Sleep(2000);
-                button.Background = defaultBackground;
+                MessageBox.Show("Uncorrect! Try again", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
         private void ThirdAnswer(object sender, RoutedEventArgs e)
         {
-            Button button = sender as Button;
             if (correctAnswer == 3)
             {
-                defaultBackground = button.Background;
-                button.Background = Brushes.Green;
-                Thread.Sleep(2000);
-                button.Background = defaultBackground;
+                MessageBox.Show("Correct!", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
+                _logics.LevelUp(_username, qname);
+                var window = new UsersPersonalWindow(_username, EnLev, JaLev, EsLev);
+                window.ShowDialog();
                 Close();
             }
             else
             {
-                defaultBackground = button.Background;
-                button.Background = Brushes.Green;
-                Thread.Sleep(2000);
-                button.Background = defaultBackground;
+                MessageBox.Show("Uncorrect! Try again", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
         private void FourthAnswer(object sender, RoutedEventArgs e)
         {
-            Button button = sender as Button;
             if (correctAnswer == 4)
             {
-                defaultBackground = button.Background;
-                button.Background = Brushes.Green;
-                Thread.Sleep(2000);
-                button.Background = defaultBackground;
+                MessageBox.Show("Correct!", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
+                _logics.LevelUp(_username, qname);
+                var window = new UsersPersonalWindow(_username, EnLev, JaLev, EsLev);
+                window.ShowDialog();
                 Close();
+                
             }
             else
             {
-                defaultBackground = button.Background;
-                button.Background = Brushes.Green;
-                Thread.Sleep(2000);
-                button.Background = defaultBackground;
+                MessageBox.Show("Uncorrect! Try again", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
+
+        public void Exit(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        public int FindAnswer(string name)
+        {
+            int answer;
+            foreach (var item in _repository.Questions)
+            {
+                foreach (var item2 in _repository.Answers)
+                {
+                    if ((item.Name == item2.Name) & (name == item.Name))
+                    {
+                        answer = item2.Correct;
+                        return answer;
+                    }
+                }
+            }
+            return 0;
+        }
+        
     }
 }

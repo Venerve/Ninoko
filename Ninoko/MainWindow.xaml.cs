@@ -47,6 +47,7 @@ namespace Ninoko
                 var levelEs = _logics.GetLevel(logUsernameBox.Text).Item3;
                 var window = new UsersPersonalWindow(logUsernameBox.Text, levelEn, levelJa, levelEs);
                 window.ShowDialog();
+                Close();
             }
             else
             {
@@ -59,6 +60,7 @@ namespace Ninoko
         {
             var window = new RegisterWindow();
             window.ShowDialog();
+            Close();
         }
         private void Exit(object sender, RoutedEventArgs e)
         {

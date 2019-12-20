@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ninoko.Models
 {
-    class AnimalsAnswer
+    public class AnimalsAnswer
     {
         public string Name { get; set; }
         public string AnimalsName { get; set; }

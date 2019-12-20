@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
 using Ninoko.Models;
@@ -12,31 +13,15 @@ namespace Ninoko
     {
         public List<User> users;
         private static int _idCounter = 1;
-        private readonly Repository _repository;
 
         public NinokoLogics()
         { 
-            LoadData(); 
+            LoadData();
         }
 
         public const string UsersFile = "../../../Data/Users.json";
 
-        public int FindAnswer(string name)
-        {
-            int answer;
-            foreach (var item in _repository.Questions)
-            {
-                foreach (var item2 in _repository.Answers)
-                {
-                    if ((item.Name == item2.Name) & (name == item.Name))
-                    {
-                        answer = item2.Correct;
-                        return answer;
-                    }
-                }
-            }
-            return 0;
-        }
+        
 
         public void Registration(string login,string password)
         {
@@ -65,7 +50,28 @@ namespace Ninoko
             return (0, 0, 0);
         }
 
-              
+        public void LevelUp(string username, string name)
+        {
+            if (name.StartsWith("En"))
+            {
+                var updated = users.FirstOrDefault(x => (x.Username == username));
+                if (updated != null) updated.CurrentLevelEn += 1;
+                Serialize(UsersFile, users);
+            }
+            else if (name.StartsWith("Ja"))
+            {
+                var updated = users.FirstOrDefault(x => (x.Username == username));
+                if (updated != null) updated.CurrentLevelJa += 1;
+                Serialize(UsersFile, users);
+            }
+            else if (name.StartsWith("Es"))
+            {
+                var updated = users.FirstOrDefault(x => (x.Username == username));
+                if (updated != null) updated.CurrentLevelEs += 1;
+                Serialize(UsersFile, users);
+            }
+        }
+
         public void LoadData()
         {
             users = Deserialize<List<User>>(UsersFile);
