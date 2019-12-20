@@ -24,7 +24,6 @@ namespace Ninoko
         private readonly Repository _repository;
         private readonly int correctAnswer;
         private readonly string _username;
-        private readonly int EnLev, JaLev, EsLev;
         private readonly string qname;
         public List<User> users;
         public Level(Repository repository, string name, string username)
@@ -32,9 +31,6 @@ namespace Ninoko
             InitializeComponent();
             _repository = repository;
             _username = username;
-            EnLev = _logics.GetLevel(username).Item1;
-            JaLev = _logics.GetLevel(username).Item2;
-            EsLev = _logics.GetLevel(username).Item3;
 
             foreach (Question _question in _repository.Questions)
             {
@@ -61,8 +57,6 @@ namespace Ninoko
             {
                 MessageBox.Show("Correct!", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
                 _logics.LevelUp(_username, qname);
-                var window = new UsersPersonalWindow(_username, EnLev, JaLev, EsLev);
-                window.ShowDialog();
                 Close();
             }
             else
@@ -77,8 +71,6 @@ namespace Ninoko
             {
                 MessageBox.Show("Correct!", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
                 _logics.LevelUp(_username, qname);
-                var window = new UsersPersonalWindow(_username, EnLev, JaLev, EsLev);
-                window.ShowDialog();
                 Close();
             }
             else
@@ -93,8 +85,6 @@ namespace Ninoko
             {
                 MessageBox.Show("Correct!", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
                 _logics.LevelUp(_username, qname);
-                var window = new UsersPersonalWindow(_username, EnLev, JaLev, EsLev);
-                window.ShowDialog();
                 Close();
             }
             else
@@ -109,8 +99,6 @@ namespace Ninoko
             {
                 MessageBox.Show("Correct!", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
                 _logics.LevelUp(_username, qname);
-                var window = new UsersPersonalWindow(_username, EnLev, JaLev, EsLev);
-                window.ShowDialog();
                 Close();
                 
             }

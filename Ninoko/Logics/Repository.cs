@@ -32,7 +32,7 @@ namespace Ninoko
                 new Question()
                 {
                     Name = "En3",
-                    QuestionItself = "What do a child want for birthday? "
+                    QuestionItself = "What does a child want for birthday? "
                 },
                 new Question()
                 {
