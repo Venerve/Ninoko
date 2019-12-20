@@ -80,21 +80,22 @@ namespace Ninoko
             if (name.StartsWith("En"))
             {
                 var updated = users.FirstOrDefault(x => (x.Username == username));
-                if (updated != null) updated.CurrentLevelEn += 1;
+                if ((updated != null) & (updated.CurrentLevelEn <= 5)) updated.CurrentLevelEn += 1;
                 Serialize(UsersFile, users);
             }
-            else if (name.StartsWith("Ja"))
+            if (name.StartsWith("Ja"))
             {
                 var updated = users.FirstOrDefault(x => (x.Username == username));
-                if (updated != null) updated.CurrentLevelJa += 1;
+                if ((updated != null) & (updated.CurrentLevelJa <=5)) updated.CurrentLevelJa += 1;
                 Serialize(UsersFile, users);
             }
-            else if (name.StartsWith("Es"))
+            if (name.StartsWith("Es"))
             {
                 var updated = users.FirstOrDefault(x => (x.Username == username));
-                if (updated != null) updated.CurrentLevelEs += 1;
+                if ((updated != null) & (updated.CurrentLevelEs <= 5)) updated.CurrentLevelEs += 1;
                 Serialize(UsersFile, users);
             }
+            
         }
 
         public void LoadData()
