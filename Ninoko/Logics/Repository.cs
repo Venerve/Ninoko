@@ -196,7 +196,7 @@ namespace Ninoko
                     Answer2 = "Sabado, Martes",
                     Answer3 = "Domingo, Viernes ",
                     Answer4 = "Martes, Viernes",
-                    Correct = 2
+                    Correct = 1
                 },
                 new Answer()
                 {

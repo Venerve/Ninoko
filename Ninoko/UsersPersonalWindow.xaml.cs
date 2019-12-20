@@ -48,7 +48,7 @@ namespace Ninoko
             string name = "En1";
             var window = new Level(_repository, name, _username);
             window.ShowDialog();
-            _logics.AvailableButtons(_levelEn, En2, En3, En4, En5);
+            Close();
         }
 
         private void English2(object sender, RoutedEventArgs e)
@@ -56,7 +56,7 @@ namespace Ninoko
             string name = "En2";
             var window = new Level(_repository, name, _username);
             window.ShowDialog();
-            _logics.AvailableButtons(_levelEn, En2, En3, En4, En5);
+            Close();
         }
 
         private void English3(object sender, RoutedEventArgs e)
@@ -64,7 +64,7 @@ namespace Ninoko
             string name = "En3";
             var window = new Level(_repository, name, _username);
             window.ShowDialog();
-            _logics.AvailableButtons(_levelEn, En2, En3, En4, En5);
+            Close();
         }
 
         private void English4(object sender, RoutedEventArgs e)
@@ -72,7 +72,7 @@ namespace Ninoko
             string name = "En4";
             var window = new Level(_repository, name, _username);
             window.ShowDialog();
-            _logics.AvailableButtons(_levelEn, En2, En3, En4, En5);
+            Close();
         }
 
         private void English5(object sender, RoutedEventArgs e)
@@ -80,7 +80,7 @@ namespace Ninoko
             string name = "En5";
             var window = new Level(_repository, name, _username);
             window.ShowDialog();
-            _logics.AvailableButtons(_levelEn, En2, En3, En4, En5);
+            Close();
         }
 
         //Japanese buttons
@@ -89,7 +89,7 @@ namespace Ninoko
             string name = "Ja1";
             var window = new Level(_repository, name, _username);
             window.ShowDialog();
-            _logics.AvailableButtons(_levelJa, Ja2, Ja3, Ja4, Ja5);
+            Close();
         }
 
         private void Japanese2(object sender, RoutedEventArgs e)
@@ -97,7 +97,7 @@ namespace Ninoko
             string name = "Ja2";
             var window = new Level(_repository, name, _username);
             window.ShowDialog();
-            _logics.AvailableButtons(_levelJa, Ja2, Ja3, Ja4, Ja5);
+            Close();
         }
 
         private void Japanese3(object sender, RoutedEventArgs e)
@@ -105,7 +105,7 @@ namespace Ninoko
             string name = "Ja3";
             var window = new Level(_repository, name, _username);
             window.ShowDialog();
-            _logics.AvailableButtons(_levelJa, Ja2, Ja3, Ja4, Ja5);
+            Close();
         }
 
         private void Japanese4(object sender, RoutedEventArgs e)
@@ -113,7 +113,7 @@ namespace Ninoko
             string name = "Ja4";
             var window = new Level(_repository, name, _username);
             window.ShowDialog();
-            _logics.AvailableButtons(_levelJa, Ja2, Ja3, Ja4, Ja5);
+            Close();
         }
 
         private void Japanese5(object sender, RoutedEventArgs e)
@@ -121,7 +121,7 @@ namespace Ninoko
             string name = "Ja5";
             var window = new Level(_repository, name, _username);
             window.ShowDialog();
-            _logics.AvailableButtons(_levelJa, Ja2, Ja3, Ja4, Ja5);
+            Close();
         }
 
         //Spanish buttons
@@ -130,7 +130,7 @@ namespace Ninoko
             string name = "Es1";
             var window = new Level(_repository, name, _username);
             window.ShowDialog();
-            _logics.AvailableButtons(_levelEs, Es2, Es3, Es4, Es5);
+            Close();
         }
 
         private void Espanol2(object sender, RoutedEventArgs e)
@@ -138,7 +138,7 @@ namespace Ninoko
             string name = "Es2";
             var window = new Level(_repository, name, _username);
             window.ShowDialog();
-            _logics.AvailableButtons(_levelEs, Es2, Es3, Es4, Es5);
+            Close();
         }
 
         private void Espanol3(object sender, RoutedEventArgs e)
@@ -146,7 +146,7 @@ namespace Ninoko
             string name = "Es3";
             var window = new Level(_repository, name, _username);
             window.ShowDialog();
-            _logics.AvailableButtons(_levelEs, Es2, Es3, Es4, Es5);
+            Close();
         }
 
         private void Espanol4(object sender, RoutedEventArgs e)
@@ -154,7 +154,7 @@ namespace Ninoko
             string name = "Es4";
             var window = new Level(_repository, name, _username);
             window.ShowDialog();
-            _logics.AvailableButtons(_levelEs, Es2, Es3, Es4, Es5);
+            Close();
         }
 
         private void Espanol5(object sender, RoutedEventArgs e)
@@ -162,7 +162,7 @@ namespace Ninoko
             string name = "Es5";
             var window = new Level(_repository, name, _username);
             window.ShowDialog();
-            _logics.AvailableButtons(_levelEs, Es2, Es3, Es4, Es5);
+            Close();
         }
     }
 }

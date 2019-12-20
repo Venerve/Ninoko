@@ -57,6 +57,9 @@ namespace Ninoko
             {
                 MessageBox.Show("Correct!", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
                 _logics.LevelUp(_username, qname);
+                //ВОТ СЮДА НАДО ВСТАВИТЬ УРОВНИ И ВО ВСЕ ОСТАЛЬНЫЕ ТАК ЖЕ И ВСЁ БУДЕТ НОРМАС! НО КАК ИХ ВСТАВИТЬ?
+                //var window = new UsersPersonalWindow(_username, );
+                //window.ShowDialog();
                 Close();
             }
             else
@@ -71,6 +74,9 @@ namespace Ninoko
             {
                 MessageBox.Show("Correct!", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
                 _logics.LevelUp(_username, qname);
+                //ВОТ СЮДА НАДО ВСТАВИТЬ УРОВНИ И ВО ВСЕ ОСТАЛЬНЫЕ ТАК ЖЕ И ВСЁ БУДЕТ НОРМАС! НО КАК ИХ ВСТАВИТЬ?
+                //var window = new UsersPersonalWindow(_username, );
+                //window.ShowDialog();
                 Close();
             }
             else
@@ -85,6 +91,9 @@ namespace Ninoko
             {
                 MessageBox.Show("Correct!", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
                 _logics.LevelUp(_username, qname);
+                //ВОТ СЮДА НАДО ВСТАВИТЬ УРОВНИ И ВО ВСЕ ОСТАЛЬНЫЕ ТАК ЖЕ И ВСЁ БУДЕТ НОРМАС! НО КАК ИХ ВСТАВИТЬ?
+                //var window = new UsersPersonalWindow(_username, );
+                //window.ShowDialog();
                 Close();
             }
             else
@@ -99,6 +108,9 @@ namespace Ninoko
             {
                 MessageBox.Show("Correct!", "Answer", MessageBoxButton.OK, MessageBoxImage.Information);
                 _logics.LevelUp(_username, qname);
+                //ВОТ СЮДА НАДО ВСТАВИТЬ УРОВНИ И ВО ВСЕ ОСТАЛЬНЫЕ ТАК ЖЕ И ВСЁ БУДЕТ НОРМАС! НО КАК ИХ ВСТАВИТЬ?
+                //var window = new UsersPersonalWindow(_username, );
+                //window.ShowDialog();
                 Close();
                 
             }
