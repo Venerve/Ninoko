@@ -20,17 +20,21 @@ namespace Ninoko
     public partial class UsersPersonalWindow : Window
     {
         public readonly NinokoLogics _logics;
+        private readonly int _levelEn, _levelJa, _levelEs;
         private readonly Repository _repository = new Repository();
         private readonly string _username;
 
         public UsersPersonalWindow(string username, int levelEn, int levelJa, int levelEs)
         {
             InitializeComponent();
+            _levelEn = levelEn;
+            _levelJa = levelJa;
+            _levelEs = levelEs;
             _username = username;
 
-            _logics.AvailableButtons(levelEn, En2, En3, En4, En5);
-            _logics.AvailableButtons(levelJa, Ja2, Ja3, Ja4, Ja5);
-            _logics.AvailableButtons(levelEs, Es2, Es3, Es4, Es5);
+            _logics.AvailableButtons(_levelEn, En2, En3, En4, En5);
+            _logics.AvailableButtons(_levelJa, Ja2, Ja3, Ja4, Ja5);
+            _logics.AvailableButtons(_levelEs, Es2, Es3, Es4, Es5);
         }
 
         private void Exit(object sender, RoutedEventArgs e)

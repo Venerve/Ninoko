@@ -45,10 +45,9 @@ namespace Ninoko
                     break;
                 case 5:
                     break;
-            }
-            
-           
+            }           
         }
+
         public void Registration(string login,string password)
         {
             _idCounter++;
